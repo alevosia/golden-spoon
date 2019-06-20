@@ -1,0 +1,307 @@
+@import url('https://fonts.googleapis.com/css?family=Khula|PT+Sans+Narrow&display=swap');
+
+:root {
+	--red: #cd2229;
+	--cream: #fff1d2;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Khula', sans-serif;
+	line-height: 1.5;
+	overflow-x: hidden;
+}
+
+h1,
+h2 {
+	font-family: 'PT Sans Narrow', sans-serif;
+	margin-bottom: 0;
+}
+
+header {
+	height: 96vh;
+	min-width: 100%;
+}
+
+main {
+	min-height: 180vh;
+	background-image: linear-gradient(-7deg, #cd2229 0%, #cd2229 50%, #fff1d2 50.1%, #fff1d2 50%);
+}
+
+a.nav-link {
+	text-transform: uppercase;
+	font-size: 1.25rem;
+	color: var(--red);
+	font-family: 'PT Sans Narrow', sans-serif;
+	font-weight: 800;
+	letter-spacing: 2px;
+}
+
+.red {
+	color: var(--red);
+}
+
+.cream {
+	color: var(--cream);
+}
+
+.round {
+	border-radius: 50px;
+}
+
+.heavy {
+	font-weight: 600;
+}
+
+/*
+.btn:focus {
+    box-shadow: none;
+}*/
+
+/* Full Screen Background Video */
+.fullscreen-video-wrapper {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	z-index: -1;
+}
+
+.fullscreen-video-wrapper > video {
+	display: block;
+	min-height: 100%;
+	min-width: 100%;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 0;
+}
+
+/* Logo */
+.logo-wrapper {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	z-index: -1;
+}
+
+.logo-wrapper > img {
+	position: absolute;
+	width: 15rem;
+	top: 12.5%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 0;
+}
+
+.banner-text-image-wrapper {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	z-index: -1;
+}
+
+.banner-text-image-wrapper > img {
+	position: absolute;
+	width: 60rem;
+	top: 55%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 0;
+}
+
+#main-navbar {
+	transition: background 1000ms;
+}
+
+#main-navbar.scrolled {
+	background: rgba(255, 255, 255, 0.5);
+}
+
+#bestseller-button {
+	position: absolute;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	padding: 15px 30px 15px 30px;
+	background: var(--cream);
+	z-index: 1;
+}
+
+#bestseller-button:hover {
+	background: var(--cream);
+}
+
+#bestseller-button > h1 {
+	color: var(--red);
+	font-weight: 900;
+	font-size: 2rem;
+	letter-spacing: 2px;
+}
+
+#products-section {
+	height: 90vh;
+}
+
+#salabat-heading {
+	font-size: 5rem;
+	font-weight: 800;
+}
+
+#products-button {
+	color: var(--cream);
+	background: var(--red);
+	padding: 15px 60px 15px 60px;
+}
+
+#products-button > h2 {
+	font-size: 1.25rem;
+}
+
+/* Animations */
+
+@keyframes float {
+	0% {
+		transform: matrix(0.99999, 0, 0, 0.99999, 0, 0);
+    }
+    
+    50% {
+		transform: matrix(0.99999, 0, 0, 0.99999, 40, 5);
+    }
+    
+	100% {
+		transform: matrix(0.99999, 0, 0, 0.99999, 0, 0);
+	}
+}
+
+#leaves-1 {
+	bottom: -180;
+	position: absolute;
+	width: 400px;
+    justify-content: start;
+    animation: float 8s ease-in-out infinite;
+}
+
+/* Media Queries */
+
+/* Large devices (desktops, less than 1200px) */
+@media (max-width: 1199.98px) {
+}
+
+/* Medium devices (tablets, less than 992px) */
+@media (max-width: 991.98px) {
+	.logo-wrapper > img {
+		top: 15%;
+		width: 12rem;
+	}
+
+	.banner-text-image-wrapper > img {
+		width: 45rem;
+	}
+
+	#bestseller-button {
+		padding: 10px 25px 10px 25px;
+	}
+
+	#bestseller-button > h1 {
+		font-size: 2rem;
+	}
+
+	#products-button {
+		padding: 10px 40px 10px 40px;
+	}
+
+	#products-button > h2 {
+		font-size: 1.15rem;
+	}
+
+	#salabat-heading {
+		font-size: 4.5rem;
+	}
+
+	#leaves-1 {
+		bottom: -150;
+        width: 250px;
+	}
+}
+
+/* Small devices (landscape phones, less than 768px) */
+@media (max-width: 767.98px) {
+	.banner-text-image-wrapper > img {
+		width: 35rem;
+	}
+
+	#bestseller-button {
+		padding: 10px 20px 10px 20px;
+	}
+
+	#bestseller-button > h1 {
+		font-size: 1.75rem;
+	}
+
+	#products-button {
+		padding: 10px 40px 10px 40px;
+	}
+
+	#products-button > h2 {
+		font-size: 1rem;
+	}
+
+	#salabat-heading {
+		font-size: 4rem;
+	}
+
+	#leaves-1 {
+		bottom: -120;
+		width: 200px;
+	}
+}
+
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+	.banner-text-image-wrapper > img {
+		width: 25rem;
+	}
+
+	#bestseller-button {
+		padding: 10px 20px 10px 20px;
+	}
+
+	#bestseller-button > h1 {
+		font-size: 1.25rem;
+	}
+
+	#salabat-heading {
+		font-size: 3.5rem;
+	}
+}
+
+/* Extra extra small devices (iPhone 5/Galaxy S5) */
+@media (max-width: 375px) {
+	.logo-wrapper > img {
+		width: 10rem;
+	}
+
+	.banner-text-image-wrapper > img {
+		width: 19rem;
+	}
+
+	#bestseller-button {
+		padding: 5px 15px 5px 15px;
+	}
+
+	#bestseller-button > h1 {
+		font-size: 1rem;
+	}
+}

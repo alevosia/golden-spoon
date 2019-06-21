@@ -122,6 +122,16 @@ a.nav-link {
 	z-index: 0;
 }
 
+.sticky-wrapper {
+	height: 160px;
+	position: absolute;
+	top: -50;
+	left: 0;
+	right: 0;
+	z-index: 0;
+	text-align: center;
+}
+
 #main-navbar {
 	transition: background 1000ms;
 }
@@ -131,16 +141,15 @@ a.nav-link {
 }
 
 #bestseller-button {
-	position: absolute;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	padding: 15px 30px 15px 30px;
+	position: sticky;
+	top: 0;
 	background: var(--cream);
+	padding: 15px 30px 15px 30px;
 	z-index: 1;
 }
 
 #bestseller-button:hover {
-	background: var(--cream);
+	background: rgba(255, 241, 210, 0.75);
 }
 
 #bestseller-button > h1 {
@@ -174,12 +183,12 @@ a.nav-link {
 @keyframes float {
 	0% {
 		transform: matrix(0.99999, 0, 0, 0.99999, 0, 0);
-    }
-    
-    50% {
+	}
+
+	50% {
 		transform: matrix(0.99999, 0, 0, 0.99999, 40, 5);
-    }
-    
+	}
+
 	100% {
 		transform: matrix(0.99999, 0, 0, 0.99999, 0, 0);
 	}
@@ -189,8 +198,8 @@ a.nav-link {
 	bottom: -180;
 	position: absolute;
 	width: 400px;
-    justify-content: start;
-    animation: float 8s ease-in-out infinite;
+	justify-content: start;
+	animation: float 8s ease-in-out infinite;
 }
 
 /* Media Queries */
@@ -232,7 +241,12 @@ a.nav-link {
 
 	#leaves-1 {
 		bottom: -150;
-        width: 250px;
+		width: 250px;
+	}
+	
+	.sticky-wrapper {
+		height: 100px;
+		top: -40;
 	}
 }
 

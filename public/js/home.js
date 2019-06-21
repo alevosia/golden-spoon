@@ -20,9 +20,10 @@ $('#bestseller-button').click(function(e) {
         scrollTop: $('#products-section').offset().top + 1
     }, 800);
     
+    /*
     $(this).animate({
         top: '100%'
-    }, 800);
+    }, 800);*/
     
     setTimeout(function() {
         const button = document.getElementById('bestseller-button');

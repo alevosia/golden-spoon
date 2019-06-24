@@ -14,6 +14,13 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.1/css/all.min.css"
+        integrity="sha256-7rF6RaSKyh16288E3hVdzQtHyzatA2MQRGu0cf6pqqM=" crossorigin="anonymous" />
+
+    <!-- Flickity -->
+    <link rel="stylesheet" href="/public/css/flickity.css">
+
     <!-- Custom CSS -->
     <link rel="stylesheet" href="/public/css/home.css">
 
@@ -23,23 +30,23 @@
 <body>
     <nav class="navbar navbar-expand-md fixed-top" id="main-navbar">
         <div class="container">
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav-links"
                 aria-label="Toggle navigation">
                 <img class="img-fluid" src="/public/images/menu_bars.png" width="30px">
             </button>
-            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="collapse navbar-collapse" id="nav-links">
                 <div class="navbar-nav mr-auto">
                     <a class="nav-item nav-link mr-5" href="/">Home</a>
-                    <a class="nav-item nav-link" href="/products">Our Products</a>
+                    <a class="nav-item nav-link" href="#">Our Products</a>
                 </div>
                 <div class="navbar-nav ml-auto">
-                    <a class="nav-item nav-link" href="/about">About Us</a>
-                    <a class="nav-item nav-link ml-md-5" href="/contact">Contact</a>
+                    <a class="nav-item nav-link" href="#">About Us</a>
+                    <a class="nav-item nav-link ml-md-5" href="#">Contact</a>
                 </div>
             </div>
         </div>
     </nav>
-
+    
     <header>
         <div class="fullscreen-video-wrapper">
             <video src="/public/images/banner_video.mp4" autoplay loop muted />
@@ -53,37 +60,266 @@
             <img src="/public/images/banner_text_image.png">
         </div>
     </header>
-
-    <main class="position-relative">
+    
+    <main>
         <div class="sticky-wrapper">
             <button class="round btn" id="bestseller-button">
                 <h1>OUR BESTSELLER</h1>
             </button>
         </div>
-        <section class="container" id="products-section">
-            <div class="row align-items-center h-100" style="position: relative;">
 
-                <div class="col-8 col-lg-6 order-0 order-lg-1 mt-5 mx-auto">
-                    <img src="/public/images/salabat.png" class="img-fluid">
+        <section class="view-height-80 bg-cream" id="products-section">
+            <div class="container">
+                <div class="row position-relative h-100">
+
+                    <div class="col-8 col-lg-6 order-0 order-lg-1 mx-auto d-flex align-items-end align-items-lg-center">
+                        <img src="/public/images/salabat.png" class="img-fluid">
+                    </div>
+
+                    <div class="col-10 col-lg-6 px-3 order-1 order-md-0 m-auto">
+                        <h1 class="red heading-text">SALABAT</h1>
+                        <p class="red heavy">
+                            is a 100% natural, refreshing, authentic and is a traditional Asian drink. Made of pure,
+                            natural
+                            and fresh ginger carefully processed to maintain its hygienic state
+                            to prevent the loss of important healing components.
+                        </p>
+                        <a href="#">
+                            <button class="cream round btn heading-button bg-red mt-0 mt-lg-3" class="">
+                                <h2>OUR PRODUCTS</h2>
+                            </button>
+                        </a>
+                    </div>
+
+                    <img src="/public/images/leaves.png" class="leaves floating-animation">
                 </div>
-
-                <div class="col-10 col-lg-6 px-3 order-1 order-md-0 mx-auto" style="margin-top: -50px;">
-                    <h1 class="red" id="salabat-heading">SALABAT</h1>
-                    <p class="red heavy">
-                        is a 100% natural, refreshing, authentic and is a traditional Asian drink. Made of pure, natural
-                        and fresh ginger carefully processed to maintain its hygienic state
-                        to prevent the loss of important healing components.
-                    </p>
-                    <a href="#">
-                        <button class="round btn mt-0 mt-lg-3" id="products-button">
-                            <h2>OUR PRODUCTS</h2>
-                        </button>
-                    </a>
-                </div>
-
-                <img src="/public/images/leaves.png" id="leaves-1">
             </div>
         </section>
+
+        <section class="view-height-80 bg-cream-red">
+            <div class="container">
+                <div class="row align-items-center justify-content-center h-100 text-white position-relative">
+
+                    <div class="col-8 col-lg-6 mt-5">
+                        <img src="/public/images/tea.png" class="img-fluid">
+                    </div>
+
+                    <div class="col-10 col-lg-6">
+                        <h1 class="heading-text">KNOW MORE ABOUT US</h1>
+                        <p>
+                            From a very humble beginning, SEAMAXX
+                            ENTERPRISES was established in 2006.
+                            With the unfading trust and confidence
+                            of its growing clientele, now it boasts of
+                            the well known brand Golden Spoon.
+                        </p>
+                        <a href="#">
+                            <button class="red round btn bg-cream heading-button hmt-0 mt-lg-3">
+                                <h2>READ MORE</h2>
+                            </button>
+                        </a>
+                    </div>
+
+                    <img src="/public/images/leaves.png" class="leaves floating-animation" style="right: 0;">
+
+                </div>
+        </section>
+
+        <section class="view-height-80 bg-red-cream">
+            <div class="container">
+                <div class="row position-relative h-100">
+
+                    <div class="col-8 col-lg-6 order-0 order-lg-1 mx-auto d-flex align-items-end align-items-lg-center">
+                        <img src="/public/images/pancit_canton.png" class="img-fluid">
+                    </div>
+
+                    <div class="col-10 col-lg-4 px-3 order-1 order-md-0 m-auto">
+                        <h1 class="red heading-text">MORE THAN JUST TEA</h1>
+                        <p class="red heavy">
+                            Besides our herbal products, we offer another
+                            different range of products as well.
+                        </p>
+                        <a href="#">
+                            <button class="cream round btn heading-button bg-red mt-0 mt-lg-3">
+                                <h2>OTHER PRODUCTS</h2>
+                            </button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="view-height-80 bg-cream-red">
+            <div class="container">
+                <div class="row h-100 justify-content-center align-items-center">
+                    <div class="col-12">
+
+                        <h2 class="text-center cream mb-5" id="clients-heading">WE ARE TRUSTED BY THE BEST</h2>
+
+                        <div class="main-gallery">
+
+                            <div class="gallery-cell">
+                                <img src="/public/images/clients/sm_supermalls.png" alt="SM Supermalls">
+                            </div>
+                            <div class="gallery-cell">
+                                <img src="/public/images/clients/puregold.png" alt="Puregold">
+                            </div>
+                            <div class="gallery-cell">
+                                <img src="/public/images/clients/robinsons_malls.png" alt="Robinsons Malls">
+                            </div>
+                            <div class="gallery-cell">
+                                <img src="/public/images/clients/mercury_drug.png" alt="Mercury Drug">
+                            </div>
+                            <div class="gallery-cell">
+                                <img src="/public/images/clients/metro.png" alt="Metro">
+                            </div>
+                            <div class="gallery-cell">
+                                <img src="/public/images/clients/10q.png" alt="10Q">
+                            </div>
+                            <div class="gallery-cell">
+                                <img src="/public/images/clients/afpces.png" alt="AFPCES">
+                            </div>
+                            <div class="gallery-cell">
+                                <img src="/public/images/clients/alfamart.png" alt="Alfamart">
+                            </div>
+                            <div class="gallery-cell">
+                                <img src="/public/images/clients/allday.png" alt="All Day">
+                            </div>
+                            <div class="gallery-cell">
+                                <img src="/public/images/clients/alturas_mall.png" alt="Alturas Mall">
+                            </div>
+                            <div class="gallery-cell">
+                                <img src="/public/images/clients/anson.png" alt="Anson">
+                            </div>
+                            <div class="gallery-cell">
+                                <img src="/public/images/clients/climart.png" alt="Climart">
+                            </div>
+                            <div class="gallery-cell">
+                                <img src="/public/images/clients/cod.png" alt="City of Dreams">
+                            </div>
+                            <div class="gallery-cell">
+                                <img src="/public/images/clients/dailymart.png" alt="Daily Mart">
+                            </div>
+                            <div class="gallery-cell">
+                                <img src="/public/images/clients/easylane.png" alt="Easy Lane">
+                            </div>
+                            <div class="gallery-cell">
+                                <img src="/public/images/clients/ever_supermarket.png" alt="Ever Supermarket">
+                            </div>
+                            <div class="gallery-cell">
+                                <img src="/public/images/clients/fisher_mall.png" alt="Fisher Mall">
+                            </div>
+                            <div class="gallery-cell">
+                                <img src="/public/images/clients/freshto.png" alt="Freshto">
+                            </div>
+                            <div class="gallery-cell">
+                                <img src="/public/images/clients/gaisano_grand.png" alt="Gaisano Grand">
+                            </div>
+                            <div class="gallery-cell">
+                                <img src="/public/images/clients/isetann.png" alt="Isetann">
+                            </div>
+                            <div class="gallery-cell">
+                                <img src="/public/images/clients/jcjs_plaza.png" alt="JCJS Plaza">
+                            </div>
+                            <div class="gallery-cell">
+                                <img src="/public/images/clients/kcc.png" alt="KCC">
+                            </div>
+                            <div class="gallery-cell">
+                                <img src="/public/images/clients/kempmart.png" alt="Kempmart">
+                            </div>
+                            <div class="gallery-cell">
+                                <img src="/public/images/clients/lee_plaza.png" alt="Lee Plaza">
+                            </div>
+                            <div class="gallery-cell">
+                                <img src="/public/images/clients/mightee_mart.png" alt="Mightee Mart">
+                            </div>
+                            <div class="gallery-cell">
+                                <img src="/public/images/clients/Mofar.png" alt="Mofar">
+                            </div>
+                            <div class="gallery-cell">
+                                <img src="/public/images/clients/nccc.png" alt="NCCC">
+                            </div>
+                            <div class="gallery-cell">
+                                <img src="/public/images/clients/pioneer.png" alt="Pioneer">
+                            </div>
+                            <div class="gallery-cell">
+                                <img src="/public/images/clients/quincy.png" alt="Quincy">
+                            </div>
+                            <div class="gallery-cell">
+                                <img src="/public/images/clients/shopersmart.png" alt="Shopersmart">
+                            </div>
+                            <div class="gallery-cell">
+                                <img src="/public/images/clients/shopwise.png" alt="Shopwise">
+                            </div>
+                            <div class="gallery-cell">
+                                <img src="/public/images/clients/south_supermarket.png" alt="South Supermarket">
+                            </div>
+                            <div class="gallery-cell">
+                                <img src="/public/images/clients/sta_lucia.png" alt="Sta. Lucia">
+                            </div>
+                            <div class="gallery-cell">
+                                <img src="/public/images/clients/thriftmart.png" alt="Thriftmart">
+                            </div>
+                            <div class="gallery-cell">
+                                <img src="/public/images/clients/tropical_supermarket.png" alt="Tropical Supermarket">
+                            </div>
+                            <div class="gallery-cell">
+                                <img src="/public/images/clients/ultra_mega.png" alt="Ultra Mega">
+                            </div>
+                            <div class="gallery-cell">
+                                <img src="/public/images/clients/unicare.png" alt="Unicare">
+                            </div>
+                            <div class="gallery-cell">
+                                <img src="/public/images/clients/unitop_lucena.png" alt="Unitop Lucena">
+                            </div>
+                            <div class="gallery-cell">
+                                <img src="/public/images/clients/walter_mart.png" alt="Walter Mart">
+                            </div>
+                            <div class="gallery-cell">
+                                <img src="/public/images/clients/winwin.png" alt="Win-Win Supermarket">
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <div class="container">
+                <div class="row h-100 align-items-center justify-content-center">
+                    <div class="col-12 text-center">
+                        <h1 class="white heading-text">We'd love to hear from you.</h1>
+                        <button class="btn round heading-button bg-cream mt-3" id="contact-button">
+                            <h2>TALK TO US</h2>
+                        </button>
+                        <br>
+                        <div class="mt-5">
+                            <a href="https://www.facebook.com/Golden-Spoon-Food-Products-1662374450756263/"
+                                target="_blank">
+                                <button class="circle btn bg-cream mr-5">
+                                    <i class="red fab fa-facebook-f mx-auto"></i>
+                                </button>
+                            </a>
+                            <a href="#">
+                                <button class="circle btn bg-cream">
+                                    <i class="red fab fa-twitter mx-auto"></i>
+                                </button>
+                            </a>
+                        </div>
+                    </div>
+
+                    <nav class="navbar navbar-expand d-none d-sm-block" id="footer-navigation">
+                        <div class="navbar-nav">
+                            <a class="nav-item nav-link mx-3" href="/">Home</a>
+                            <a class="nav-item nav-link mx-3" href="#">Our Products</a>
+                            <a class="nav-item nav-link mx-3" href="#">About Us</a>
+                            <a class="nav-item nav-link mx-3" href="#">Contact</a>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </footer>
     </main>
 
     <!-- jQuery -->
@@ -95,7 +331,11 @@
         integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o"
         crossorigin="anonymous"></script>
 
-    <script src="/public/js/fitty.min.js"></script>
+    <!-- CircleType -->
+    <script src="/public/js/circletype.min.js"></script>
+
+    <!-- Flickity -->
+    <script src="/public/js/flickity.min.js"></script>
 
     <script src="/public/js/home.js"></script>
 </body>

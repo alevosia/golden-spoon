@@ -1,9 +1,12 @@
 $(document).ready(function() {
-	$('.main-gallery').flickity({
-		contain: true,
-		wrapAround: true,
-	});
-	
+	console.log('Document is ready.');
+});
+
+/* Clients Carousel */
+const $carousel = $('.main-gallery');
+
+$carousel.on('ready.flickity', function() {
+	console.log('Main gallery is ready!');
 	setInterval(function() {
 		if (!document.hidden) {
 			$('.main-gallery').flickity('next');
@@ -11,7 +14,14 @@ $(document).ready(function() {
 	}, 2000);
 });
 
+$carousel.flickity({
+	wrapAround: true,
+	imagesLoaded: true
+});
+
 $('#bestseller-button').click(function(e) {
+	e.preventDefault();
+	
 	$('html, body').animate({
 		scrollTop: $('#products-section').offset().top + 1
 	}, 800);

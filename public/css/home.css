@@ -23,6 +23,7 @@ h2 {
 }
 
 header {
+	position: relative;
 	height: 97vh;
 	min-width: 100%;
 	z-index: 5;
@@ -32,10 +33,13 @@ main {
 	position: relative;
 }
 
+main > section {
+	height: 85vh;
+}
+
 footer {
-	height: 50vh;
-	background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-		url(/public/images/teaset.jpg);
+	height: 55vh;
+	background: url(/public/images/footer_background.png);
 	background-size: cover;
 	background-attachment: fixed;
 	background-position: center;
@@ -73,14 +77,6 @@ a.nav-link:hover:before {
 	transform: scaleX(1);
 }
 
-footer a.nav-link {
-	color: white;
-}
-
-footer a.nav-link:hover {
-	color: var(--red);
-}
-
 .flickity-page-dots {
 	display: none;
 }
@@ -109,7 +105,17 @@ footer a.nav-link:hover {
 	border-radius: 50%;
 	width: 60px;
 	height: 60px;
+	position: relative;
 	font-size: 2.5rem;
+}
+
+.icon {
+	position: absolute;
+    top: 42%;
+    left: 50%;
+    height: 50%;
+    transform: translate(-50%, -50%);
+	display: block;	
 }
 
 .heavy {
@@ -169,14 +175,23 @@ footer a.nav-link:hover {
 }
 
 .fullscreen-video-wrapper > video {
+	position: absolute;
 	display: block;
 	min-height: 100%;
 	min-width: 100%;
-	position: absolute;
 	top: 50%;
 	left: 50%;
+	width: auto;
+    height: auto;
 	transform: translate(-50%, -50%);
-	z-index: 0;
+	-ms-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+	z-index: 5;
+	
+	/* Fallback Image */
+	background: url(/public/images/banner_image.jpg) no-repeat;
+    background-size: cover; 
 }
 
 /* Logo */
@@ -224,7 +239,7 @@ footer a.nav-link:hover {
 	top: -50;
 	left: 0;
 	right: 0;
-	z-index: 0;
+	z-index: 100;
 	text-align: center;
 }
 
@@ -317,6 +332,7 @@ img.float-to-right-animation {
 	position: absolute;
 	left: 0;
 	right: 0;
+	z-index: 100;
 }
 
 #bestseller-button {
@@ -394,6 +410,12 @@ img.float-to-right-animation {
 	.gallery-cell {
 		width: 30%;
 	}
+	
+	.circle {
+		width: 50px;
+		height: 50px;
+		font-size: 2.25rem;
+	}
 
 	#bestseller-button {
 		padding: 10px 25px 10px 25px;
@@ -406,6 +428,11 @@ img.float-to-right-animation {
 
 /* Small devices (landscape phones, less than 768px) */
 @media (max-width: 767.98px) {
+	
+	main > section {
+		height: 80vh;
+	}
+	
 	.banner-text-image-wrapper > img {
 		width: 35rem;
 	}
@@ -416,7 +443,7 @@ img.float-to-right-animation {
 	}
 
 	.heading-text {
-		font-size: 4rem;
+		font-size: 3rem;
 	}
 
 	.heading-button h2 {
@@ -443,10 +470,6 @@ img.float-to-right-animation {
 	}
 
 	#clients-heading,
-	.heading-text {
-		font-size: 3rem;
-	}
-	
 	.heading-text {
 		font-size: 2.5rem;
 	}
@@ -497,6 +520,11 @@ img.float-to-right-animation {
 	.leaves {
 		bottom: -80;
 		width: 150px;
+	}
+	
+	.sticky-wrapper {
+		height: 100px;
+		top: -20;
 	}
 
 	#bestseller-button {

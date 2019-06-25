@@ -49,7 +49,11 @@
 
     <header>
         <div class="fullscreen-video-wrapper">
-            <video src="/public/images/banner_video.mp4" autoplay loop muted />
+            <video playsinline autoplay muted loop poster="/public/images/banner_image.jpg">
+                <source src="/public/images/banner_video.mp4">
+                <source src="/public/images/banner_video.webm">
+                Your browser does not support video elements.
+            </video>
         </div>
 
         <div class="logo-wrapper">
@@ -68,7 +72,7 @@
             </button>
         </div>
 
-        <section class="view-height-80 bg-cream" id="products-section">
+        <section class="bg-cream" id="products-section">
             <div class="container">
                 <div class="row position-relative h-100">
 
@@ -76,7 +80,7 @@
                         <img src="/public/images/salabat.png" class="img-fluid">
                     </div>
 
-                    <div class="col-12 col-lg-6 order-1 order-md-0 mx-auto my-lg-auto">
+                    <div class="col-12 col-lg-6 order-1 order-md-0 mx-auto mt-3 my-lg-auto">
                         <h1 class="red heading-text">SALABAT</h1>
                         <p class="red heavy">
                             is a 100% natural, refreshing, authentic and is a traditional Asian drink. Made of pure,
@@ -96,18 +100,20 @@
             </div>
         </section>
 
-        <section class="view-height-80 bg-cream-red">
+        <section class="bg-cream-red">
             <div class="container">
-                
+
                 <div class="row position-relative h-100 text-white ">
 
+                    <!-- Tea Image -->
                     <div class="col-7 col-lg-6 mx-auto d-flex align-items-end align-items-lg-center">
                         <img src="/public/images/tea.png" class="img-fluid">
                     </div>
 
-                    <div class="col-12 col-lg-6 mx-auto my-lg-auto">
-                        <h1 class="heading-text">KNOW MORE<br>ABOUT US</h1>
-                        <p>
+                    <!-- About Text -->
+                    <div class="col-12 col-lg-6 mx-auto mt-3 my-lg-auto">
+                        <h1 class="cream heading-text">KNOW MORE<br>ABOUT US</h1>
+                        <p class="cream">
                             From a very humble beginning, SEAMAXX
                             ENTERPRISES was established in 2006.
                             With the unfading trust and confidence
@@ -125,15 +131,17 @@
                 </div>
         </section>
 
-        <section class="view-height-80 bg-red-cream">
+        <section class="bg-red-cream">
             <div class="container">
                 <div class="row position-relative h-100">
 
+                    <!-- Pancit Canton Image -->
                     <div class="col-8 col-lg-6 order-0 order-lg-1 mx-auto d-flex align-items-end align-items-lg-center">
                         <img src="/public/images/pancit_canton.png" class="img-fluid">
                     </div>
 
-                    <div class="col-10 col-lg-4 px-3 order-1 order-md-0 m-auto">
+                    <!-- Other Products Text -->
+                    <div class="col-12 col-lg-4 px-3 order-1 order-md-0 mx-auto mt-3 my-lg-auto">
                         <h1 class="red heading-text">MORE THAN JUST TEA</h1>
                         <p class="red heavy">
                             Besides our herbal products, we offer another
@@ -149,13 +157,15 @@
             </div>
         </section>
 
-        <section class="view-height-80 bg-cream-red">
+        <section class="bg-cream-red">
             <div class="container">
                 <div class="row h-100 justify-content-center align-items-center">
                     <div class="col-12">
 
-                        <h2 class="text-center cream mb-5" id="clients-heading">WE ARE TRUSTED BY THE BEST</h2>
-
+                        <div class="col-12 col-md-10 col-lg-8 mx-auto">
+                            <img src="/public/images/clients_text_image.png" class="img-fluid mb-5">
+                        </div>
+                        
                         <div class="main-gallery">
 
                             <div class="gallery-cell">
@@ -288,28 +298,30 @@
         <footer>
             <div class="container">
                 <div class="row h-100 align-items-center justify-content-center">
-                    <div class="col-12 text-center">
-                        <h1 class="white heading-text">We'd love to hear from you.</h1>
-                        <button class="btn round heading-button bg-white mt-3" id="contact-button">
-                            <h2>TALK TO US</h2>
+                    <div class="col-12 red text-center">
+                        <h1 class="heading-text">We'd love to hear from you.</h1>
+                        <button class="btn round heading-button bg-red mt-3" id="contact-button">
+                            <h2 class="cream">TALK TO US</h2>
                         </button>
                         <br>
-                        <div class="mt-5">
+
+                        <div class="mt-3 mt-lg-4">
                             <a href="https://www.facebook.com/Golden-Spoon-Food-Products-1662374450756263/"
                                 target="_blank">
-                                <button class="circle btn bg-white mr-5">
-                                    <i class="red fab fa-facebook-f mx-auto"></i>
+                                <button class="circle btn bg-red mr-3">
+                                    <i class="cream icon fab fa-facebook-f mx-auto"></i>
                                 </button>
                             </a>
                             <a href="#">
-                                <button class="circle btn bg-white">
-                                    <i class="red fab fa-twitter mx-auto"></i>
+                                <button class="circle btn bg-red ml-3">
+                                    <i class="cream icon fab fa-twitter mx-auto"></i>
                                 </button>
                             </a>
                         </div>
+
                     </div>
 
-                    <nav class="navbar navbar-expand d-none d-sm-block" id="footer-navigation">
+                    <nav class="navbar navbar-expand d-none d-md-block" id="footer-navigation">
                         <div class="navbar-nav">
                             <a class="nav-item nav-link mx-3" href="/">Home</a>
                             <a class="nav-item nav-link mx-3" href="#">Our Products</a>

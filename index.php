@@ -19,6 +19,13 @@ switch ($request_uri[0]) {
         }
         
     // About page
+    case '/products':
+        if (file_exists('./views/products.html')) {
+            require './views/products.html';
+            break;
+        }
+        
+    // About page
     case '/about':
         if (file_exists('./views/about.html')) {
             require './views/about.html';

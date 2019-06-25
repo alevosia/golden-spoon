@@ -446,6 +446,14 @@ img.float-to-right-animation {
 	.heading-text {
 		font-size: 3rem;
 	}
+	
+	.heading-text {
+		font-size: 2.5rem;
+	}
+
+	.heading-button h2 {
+		font-size: 0.8rem;
+	}
 
 	.bg-cream-red {
 		background-image: linear-gradient(
@@ -484,6 +492,11 @@ img.float-to-right-animation {
 
 	.banner-text-image-wrapper > img {
 		width: 19rem;
+	}
+	
+	.leaves {
+		bottom: -80;
+		width: 150px;
 	}
 
 	#bestseller-button {

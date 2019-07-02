@@ -5,11 +5,108 @@
 	--cream: #fff1d2;
 }
 
+/* Colors */
+.white {
+	color: white;
+}
+
+.red {
+	color: var(--red);
+}
+
+.cream {
+	color: var(--cream);
+}
+
+/* Backgrounds */
+.red-bg {
+	background: var(--red);
+}
+
+.cream-bg {
+	background: var(--cream);
+}
+
+.cream-red-bg {
+	background: linear-gradient(to top left, #cd2229 49.5%, #fff1d2 50.5%);
+}
+
+.red-cream-bg {
+	background: linear-gradient(to top left, #fff1d2 49.5%, #cd2229 50.5%);
+}
+
+/* Shapes, Objects & Attributes */
+.icon-bar {
+	position: fixed;
+	top: 25%;
+	right: 0%;
+	width: 250px;
+	height: fit-content;
+	border-radius: 40px;
+	z-index: 9999;
+}
+
+.icon-bar > a {
+	text-decoration: none;
+	color: var(--cream);
+	font-weight: 600;
+}
+
+.icon-wrapper {
+	position: absolute;
+	right: -195px;
+	width: 100%;
+	height: inherit;
+	border-radius: inherit;
+	background: var(--red);
+	transition: all ease-in-out 0.3s;
+	-webkit-transition: all ease-in-out 0.3s;
+	-moz-transition: all ease-in-out 0.3s;
+}
+
+.icon-bar:hover > .icon-wrapper, .icon-bar:active > .icon-wrapper {
+    transform: translateX(-170px);
+	-webkit-transform: translateX(-170px);
+	border: solid 1px rgba(255, 241, 210, 0.50);
+}
+
+.icon {
+	font-size: 2.5rem;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 20px;
+}
+
+.divider {
+	height: 10vh;
+}
+
+.round {
+	border-radius: 50px;
+}
+
+.circle {
+	border-radius: 50%;
+	width: fit-content;
+	height: auto;
+}
+
+.heavy {
+	font-weight: 600;
+}
+
+/* Absolute Positions */
+.bottom {
+	bottom: 0;
+}
+
+/* Globals */
 * {
 	box-sizing: border-box;
 }
 
 body {
+	position: relative;
 	font-family: 'Khula', sans-serif;
 	line-height: 1.5;
 	max-width: 100%;
@@ -34,16 +131,25 @@ main {
 }
 
 main > section {
-	height: 85vh;
+	height: 80vh;
 }
 
 footer {
-	height: 55vh;
+	height: 45vh;
 	background: url(/public/images/footer_background.jpg);
 	background-size: cover;
 	background-attachment: fixed;
 	background-position: center;
 	background-repeat: no-repeat;
+}
+
+/* Navigation Links */
+
+nav.navbar {
+	position: absolute;
+	left: 0;
+	right: 0;
+	z-index: 100;
 }
 
 a.nav-link {
@@ -75,92 +181,6 @@ a.nav-link:hover::before {
 	visibility: visible;
 	-webkit-transform: scaleX(1);
 	transform: scaleX(1);
-}
-
-.flickity-page-dots {
-	display: none;
-}
-
-.view-height-80 {
-	height: 80vh;
-}
-
-.white {
-	color: white;
-}
-
-.red {
-	color: var(--red);
-}
-
-.cream {
-	color: var(--cream);
-}
-
-.round {
-	border-radius: 50px;
-}
-
-.circle {
-	border-radius: 50%;
-	width: 60px;
-	height: 60px;
-	position: relative;
-	font-size: 2.5rem;
-}
-
-.icon {
-	position: absolute;
-    top: 42%;
-    left: 50%;
-    height: 50%;
-    transform: translate(-50%, -50%);
-	display: block;	
-}
-
-.heavy {
-	font-weight: 600;
-}
-
-.bg-white {
-	background: white;	
-}
-
-.bg-red {
-	background: var(--red);
-}
-
-.bg-cream {
-	background: var(--cream);
-}
-
-.bg-cream-red {
-	background-image: linear-gradient(357deg, #cd2229 0%, #cd2229 90%, #fff1d2 90.1%, #fff1d2 9.9%);
-}
-
-.bg-red-cream {
-	background-image: linear-gradient(357deg, #fff1d2 0%, #fff1d2 90%, #cd2229 90.1%, #cd2229 9.9%);
-}
-
-.justified {
-	text-align: justify;
-}
-
-/* Section Headings */
-
-.heading-text {
-	font-size: 5rem;
-	font-weight: 800;
-}
-
-.heading-button {
-	padding: 15px 60px 15px 60px;
-}
-
-.heading-button > h2 {
-	font-size: 1.25rem;
-	letter-spacing: 2px;
-	font-weight: 800;
 }
 
 /* Full Screen Background Video */
@@ -202,15 +222,16 @@ a.nav-link:hover::before {
 	width: 100%;
 	height: 100%;
 	overflow: hidden;
-	z-index: 10;
+	z-index: 15;
 }
 
-.logo-wrapper > img {
+.logo-wrapper > a > img {
 	position: absolute;
 	width: 12rem;
 	top: 12.5%;
 	left: 50%;
 	transform: translate(-50%, -50%);
+	-webkit-transform: translate(-50%, -50%);
 	z-index: 100;
 }
 
@@ -230,6 +251,7 @@ a.nav-link:hover::before {
 	top: 55%;
 	left: 50%;
 	transform: translate(-50%, -50%);
+	-webkit-transform: translate(-50%, -50%);
 	z-index: 100;
 }
 
@@ -243,6 +265,23 @@ a.nav-link:hover::before {
 	text-align: center;
 }
 
+/* Section Headings */
+.heading-text {
+	font-size: 5rem;
+	font-weight: 800;
+}
+
+.heading-button {
+	padding: 15px 60px 15px 60px;
+}
+
+.heading-button > h2 {
+	font-size: 1.25rem;
+	letter-spacing: 2px;
+	font-weight: 800;
+}
+
+/* Carousel */
 .gallery-cell {
 	width: 20%;
 }
@@ -253,8 +292,11 @@ a.nav-link:hover::before {
 	padding-right: 5px;
 }
 
-/* Leaves */
+.flickity-page-dots {
+	display: none;
+}
 
+/* Leaves with Floating Animation */
 @keyframes float-to-right {
 	0% {
 		transform: matrix(0.99999, 0, 0, 0.99999, 0, 0);
@@ -328,13 +370,6 @@ img.float-to-right-animation {
 	}
 }
 
-#main-navbar {
-	position: absolute;
-	left: 0;
-	right: 0;
-	z-index: 100;
-}
-
 #bestseller-button {
 	position: sticky;
 	top: 0;
@@ -354,29 +389,17 @@ img.float-to-right-animation {
 	letter-spacing: 2px;
 }
 
-#clients-heading {
-	font-size: 4rem;
-	font-weight: 800;
-}
-
-#footer-navigation {
-	position: absolute;
-	bottom: 0;
-}
-
-#contact-button:hover {
-	color: var(--red);
-}
-
 /* Media Queries */
 
 /* Large devices (desktops, less than 1200px) */
 @media (max-width: 1199.98px) {
+	
 }
 
 /* Medium devices (tablets, less than 992px) */
 @media (max-width: 991.98px) {
-	.logo-wrapper > img {
+	
+	.logo-wrapper > a > img {
 		top: 15%;
 		width: 12rem;
 	}
@@ -410,12 +433,6 @@ img.float-to-right-animation {
 	.gallery-cell {
 		width: 30%;
 	}
-	
-	.circle {
-		width: 50px;
-		height: 50px;
-		font-size: 2.25rem;
-	}
 
 	#bestseller-button {
 		padding: 10px 25px 10px 25px;
@@ -429,8 +446,16 @@ img.float-to-right-animation {
 /* Small devices (landscape phones, less than 768px) */
 @media (max-width: 767.98px) {
 	
-	main > section {
-		height: 80vh;
+	nav.navbar {
+		background: rgb(255, 241, 210, 0.5);
+	}
+	
+	.icon-wrapper {
+		right: -205px;
+	}
+	
+	.icon {
+		font-size: 1.5rem;
 	}
 	
 	.banner-text-image-wrapper > img {
@@ -457,45 +482,21 @@ img.float-to-right-animation {
 	#bestseller-button > h1 {
 		font-size: 1.75rem;
 	}
-
-	#main-navbar {
-		background: rgb(255, 241, 210, 0.5);
-	}
 }
 
 /* Extra small devices (portrait phones, less than 576px) */
 @media (max-width: 575.98px) {
+	
 	.banner-text-image-wrapper > img {
 		width: 25rem;
 	}
-
-	#clients-heading,
+	
 	.heading-text {
 		font-size: 2.5rem;
 	}
 
 	.heading-button h2 {
 		font-size: 0.8rem;
-	}
-
-	.bg-cream-red {
-		background-image: linear-gradient(
-			351deg,
-			#cd2229 0%,
-			#cd2229 90%,
-			#fff1d2 90.1%,
-			#fff1d2 9.9%
-		);
-	}
-
-	.bg-red-cream {
-		background-image: linear-gradient(
-			351deg,
-			#fff1d2 0%,
-			#fff1d2 90%,
-			#cd2229 90.1%,
-			#cd2229 9.9%
-		);
 	}
 
 	#bestseller-button {
@@ -509,8 +510,8 @@ img.float-to-right-animation {
 
 /* Extra extra small devices (iPhone 5/Galaxy S5) */
 @media (max-width: 375px) {
-	.logo-wrapper > img {
-		width: 10rem;
+	.logo-wrapper > a > img {
+		width: 7rem;
 	}
 
 	.banner-text-image-wrapper > img {

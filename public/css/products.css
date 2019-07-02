@@ -41,6 +41,50 @@
 	border-radius: 50px;
 }
 
+/* Shapes, Objects & Attributes */
+.icon-bar {
+	position: fixed;
+	top: 25%;
+	right: 0%;
+	width: 250px;
+	height: fit-content;
+	border-radius: 40px;
+	z-index: 300;
+}
+
+.icon-bar > a {
+	text-decoration: none;
+	color: var(--cream);
+	font-weight: 600;
+}
+
+.icon-wrapper {
+	position: absolute;
+	right: -195px;
+	width: 100%;
+	height: inherit;
+	border-radius: inherit;
+	background: var(--red);
+	transition: all ease-in-out 0.3s;
+	-webkit-transition: all ease-in-out 0.3s;
+	-moz-transition: all ease-in-out 0.3s;
+}
+
+.icon-bar:hover > .icon-wrapper, .icon-bar:active > .icon-wrapper {
+    transform: translateX(-170px);
+	-webkit-transform: translateX(-170px);
+	border: solid 1px rgba(255, 241, 210, 0.50);
+}
+
+.icon {
+	font-size: 2.5rem;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 20px;
+}
+
+/* Globals */
+
 * {
 	box-sizing: border-box;
 }
@@ -50,7 +94,8 @@ body {
 	line-height: 1.5;
 	max-width: 100%;
     overflow-x: hidden !important;
-    background-color: var(--cream);
+	background-color: var(--cream);
+	position: relative;
 }
 
 h1,
@@ -64,7 +109,7 @@ p {
 }
 
 header {
-    height: 100vh;
+    height: 95vh;
     position: relative;
     background-image: url(/public/images/products_banner.jpg);
     background-position: center;
@@ -80,8 +125,8 @@ header {
     line-height: 0.8;
 }
 
-/* Main navigation bar */
-#main-navbar {
+/* Navigation */ 
+nav.navbar{
     position: absolute;
     background: var(--cream);
     left: 0;
@@ -130,13 +175,13 @@ a.nav-link:hover::before {
 	overflow: hidden;
 }
 
-.logo-wrapper > img {
+.logo-wrapper > a > img {
 	position: absolute;
-	width: 12rem;
+	width: 12.25rem;
 	top: 10%;
 	left: 50%;
     transform: translate(-50%, -50%);
-    z-index: 100;
+    z-index: 9999;
 }
 
 .header-product-wrapper {
@@ -174,4 +219,50 @@ a.nav-link:hover::before {
     padding: 18px 5px 18px 5px;
     font-weight: 800;
     letter-spacing: 2px;
+}
+
+
+/* Media Queries */
+
+/* Large devices (desktops, less than 1200px) */
+@media (max-width: 1199.98px) {
+	
+}
+
+/* Medium devices (tablets, less than 992px) */
+@media (max-width: 991.98px) {
+	
+	.logo-wrapper > a > img {
+		top: 15%;
+		width: 12rem;
+	}
+}
+
+/* Small devices (landscape phones, less than 768px) */
+@media (max-width: 767.98px) {
+	
+	nav.navbar {
+		background: rgb(255, 241, 210, 0.5);
+	}
+	
+	.icon-wrapper {
+		right: -205px;
+	}
+	
+	.icon {
+		font-size: 1.5rem;
+	}
+}
+
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+	
+}
+
+/* Extra extra small devices (iPhone 5/Galaxy S5) */
+@media (max-width: 375px) {
+	
+	.logo-wrapper > a > img {
+		width: 7rem;
+	}
 }

@@ -1,10 +1,67 @@
 <!doctype html>
 <html>
+
 <head>
+    <style>
+        :root {
+            --red: #cd2229;
+            --cream: #fff1d2;
+        }
+
+        html,
+        body {
+            height: 100%;
+        }
+
+        body {
+            background-image: url(/public/images/tea_pouring.gif);
+            background-size: cover;
+            background-position: center;
+            overflow: hidden;
+        }
+
+        main {
+            height: 100%;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        main>h1 {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: 2.5rem;
+            font-weight: 200;
+            color: var(--cream);
+            text-align: center;
+            text-shadow: 2px 2px var(--red);
+        }
+
+        main>button {
+            padding: 10px 20px 10px 20px;
+            border-radius: 40px;
+            background-color: rgb(205, 34, 41, 0.85);
+            text-decoration: none;
+            color: var(--cream);
+            border: 1px var(--cream) solid;
+            font-size: 1rem;
+        }
+    </style>
     <title>404 Not Found</title>
 </head>
+
 <body>
-    <h1>Page Not Found</h1>
-    <a href="/"><button>Home</button></a>
+    <main>
+        <h1>We couldn't find what you're looking for :(</h1>
+        <button onclick="goBack()">Go Back</a>
+    </main>
+
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+    </script>
 </body>
+
 </html>

@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <meta name="keywords" content="golden spoon, herbal, tea, salabat, sambong, lagundi, pancit canton">
+    <meta name="keywords" content="golden spoon, products, herbal, tea, salabat, sambong, lagundi">
     <meta name="description"
         content="Herbal tea and food products in the highest standard at the most reasonable cost.">
 
@@ -18,9 +18,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.1/css/all.min.css"
         integrity="sha256-7rF6RaSKyh16288E3hVdzQtHyzatA2MQRGu0cf6pqqM=" crossorigin="anonymous" />
 
-    <!-- Flickity -->
-    <link rel="stylesheet" href="/public/css/flickity.css">
-
     <!-- Custom CSS -->
     <link rel="stylesheet" href="/public/css/products.css">
 
@@ -28,17 +25,18 @@
 </head>
 
 <body>
-
+    <!-- Facebook -->
     <div class="icon-bar">
-        <a href="https://www.facebook.com/Golden-Spoon-Food-Products-1662374450756263/" class="icon-wrapper" target="_blank">
-            <button class="circle icon btn red-bg">
-                <i class="cream fab fa-facebook-f"></i>
-            </button>
+        <a href="https://www.facebook.com/Golden-Spoon-Food-Products-1662374450756263/" class="icon-wrapper"
+            target="_blank">
+            <i class="cream circle icon btn red-bg fab fa-facebook-f"></i>
             <span>Like Us On Facebook!</span>
         </a>
     </div>
-    
+
     <header>
+
+        <!-- Header Navigation -->
         <nav class="navbar navbar-expand-md">
             <div class="container">
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav-links"
@@ -58,15 +56,17 @@
             </div>
         </nav>
 
+        <!-- Logo -->
         <div class="logo-wrapper">
             <a href="/">
                 <img src="/public/images/logo_with_cream.png" alt="Logo">
             </a>
         </div>
 
-        <div class="container position-relative">
-            <div class="row h-100 d-flex align-items-center">
-                <div class="col-6 red">
+        <!-- Header Information -->
+        <div class="container h-100 position-relative">
+            <div class="row d-flex align-items-center">
+                <div class="col-10 col-md-8 col-lg-6 red">
                     <h1 class="header-text">Herbal Products</h1>
                     <p class="mt-4">
                         From a very humble beginning, SEAMAXX ENTERPRISES
@@ -77,56 +77,213 @@
                 </div>
             </div>
 
+            <!-- Absolutely Positioned Salabat -->
             <div class="header-product-wrapper">
                 <img src="/public/images/salabat2.png" alt="Salabat">
             </div>
         </div>
     </header>
 
-    <section class="container" style="height: 30vh; border: 1px dashed blueviolet;">
-        <div class="row justify-content-center h-100">
-            <h2 class="round cream text-center bg-red my-auto" id="rebranding-text">
-                We are currently undergoing product re-branding
-            </h2>
-        </div>
-    </section>
-
-    <section class="container" style="height: 80vh; border: 1px dashed gray;">
-        <div class="row h-100">
-            <div class="col-6">
-
-            </div>
-            <div class="col-6">
-
+    <section class="rebranding">
+        <div class="container h-100">
+            <div class="row justify-content-center">
+                <h2 class="round cream text-center red-bg my-auto" id="rebranding-text">
+                    We are currently undergoing product re-branding
+                </h2>
             </div>
         </div>
     </section>
 
-    <main class="container" style="border: 1px dashed red;">
-        <div class="row">
 
-            <div class="col-4">
-                <div class="card">
-                    <img src="/public/images/pito_pito.png" class="img-fluid">
+    <section class="showcase">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12 col-sm-10 col-lg-6 text-center my-auto">
+                    <a href="/products/salabat">
+                        <img src="/public/images/salabat_products.png" class="img-fluid product-image">
+                    </a>
+                </div>
+                <div class="col-12 col-lg-4 text-center my-lg-auto">
+                    <h2 class="red heading-text">SALABAT</h2>
+                    <p class="red">Instant Ginger Brew Tea</p>
+                    <a href="/products/salabat" class="cream round btn red-bg heading-button">
+                        <h2>KNOW MORE</h2>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <main>
+        <div class="container" style="height: fit-content;">
+            <div class="row card-deck justify-content-center">
+
+                <!-- Pito Pito -->
+                <div class="col-12 col-md-6 col-lg-4 mb-3">
+                    <div class="card h-100 red text-center">
+                        <a href="/products/pitopito">
+                            <img src="/public/images/pito_pito.png" class="card-img-top product-image">
+                        </a>
+                        <div class="card-body pt-0">
+                            <h2 class="card-title">PITO PITO</h2>
+                            <p class="card-text">Herbal Tea Health Drink</p>
+                            <a href="/products/pitopito" class="card-link cream round btn red-bg px-5">Know More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Malunggay -->
+                <div class="col-12 col-md-6 col-lg-4 mb-3">
+                    <div class="card h-100 red text-center">
+                        <a href="/products/malunggay">
+                            <img src="/public/images/malunggay.png" class="card-img-top product-image">
+                        </a>
+                        <div class="card-body pt-0">
+                            <h2 class="card-title">Malunggay Tea</h2>
+                            <p class="card-text">Moringa Oleifera</p>
+                            <a href="/products/malunggay" class="card-link cream round btn red-bg px-5">Know More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Lagundi -->
+                <div class="col-12 col-md-6 col-lg-4 mb-3">
+                    <div class="card h-100 red text-center">
+                        <a href="/products/lagundi">
+                            <img src="/public/images/lagundi.png" class="card-img-top product-image">
+                        </a>
+                        <div class="card-body pt-0">
+                            <h2 class="card-title">Lagundi</h2>
+                            <p class="card-text">Herbal Tea</p>
+                            <a href="/products/lagundi" class="card-link cream round btn red-bg px-5">Know More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Banaba -->
+                <div class="col-12 col-md-6 col-lg-4 mb-3">
+                    <div class="card h-100 red text-center">
+                        <a href="/products/banaba">
+                            <img src="/public/images/banaba.png" class="card-img-top product-image">
+                        </a>
+                        <div class="card-body pt-0">
+                            <h2 class="card-title">Banaba</h2>
+                            <p class="card-text">100% Natural</p>
+                            <a href="/products/banaba" class="card-link cream round btn red-bg px-5">Know More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sambong -->
+                <div class="col-12 col-md-6 col-lg-4 mb-3">
+                    <div class="card h-100 red text-center">
+                        <a href="/products/sambong">
+                            <img src="/public/images/sambong.png" class="card-img-top product-image">
+                        </a>
+                        <div class="card-body pt-0">
+                            <h2 class="card-title">Sambong</h2>
+                            <p class="card-text">100% Natural</p>
+                            <a href="/products/sambong" class="card-link cream round btn red-bg px-5">Know More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Green Tea -->
+                <div class="col-12 col-md-6 col-lg-4 mb-3">
+                    <div class="card h-100 red text-center">
+                        <a href="/products/green-tea">
+                            <img src="/public/images/green_tea.png" class="card-img-top product-image">
+                        </a>
+                        <div class="card-body pt-0">
+                            <h2 class="card-title">Green Tea</h2>
+                            <p class="card-text">Japanese Green Tea</p>
+                            <a href="/products/lagundi" class="card-link cream round btn red-bg px-5">Know More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Guyabano -->
+                <div class="col-12 col-md-6 col-lg-4 mb-3">
+                    <div class="card h-100 red text-center">
+                        <a href="/products/guyabano">
+                            <img src="/public/images/guyabano.png" class="card-img-top product-image">
+                        </a>
+                        <div class="card-body pt-0">
+                            <h2 class="card-title">Guyabano</h2>
+                            <p class="card-text">Herbal Tea</p>
+                            <a href="/products/guyabano" class="card-link cream round btn red-bg px-5">Know More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tanglad -->
+                <div class="col-12 col-md-6 col-lg-4 mb-3">
+                    <div class="card h-100 red text-center">
+                        <a href="/products/tanglad">
+                            <img src="/public/images/tanglad.png" class="card-img-top product-image">
+                        </a>
+                        <div class="card-body pt-0">
+                            <h2 class="card-title">Tanglad</h2>
+                            <p class="card-text">Herbal Tea</p>
+                            <a href="/products/tanglad" class="card-link cream round btn red-bg px-5">Know More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Ampalaya -->
+                <div class="col-12 col-md-6 col-lg-4 mb-3">
+                    <div class="card h-100 red text-center">
+                        <a href="/products/ampalaya">
+                            <img src="/public/images/ampalaya.png" class="card-img-top product-image">
+                        </a>
+                        <div class="card-body mt-0 mt-lg-3 mt-xl-4">
+                            <h2 class="card-title">Ampalaya</h2>
+                            <p class="card-text">Herbal Tea</p>
+                            <a href="/products/ampalaya" class="card-link cream round btn red-bg px-5">Know More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Turmeric -->
+                <div class="col-12 col-md-6 col-lg-4 mb-3">
+                    <div class="card h-100 red text-center">
+                        <a href="/products/turmeric">
+                            <img src="/public/images/turmeric.png" class="card-img-top product-image">
+                        </a>
+                        <div class="card-body pt-0">
+                            <h2 class="card-title">Turmeric</h2>
+                            <p class="card-text">Instant Powder Drink</p>
+                            <a href="/products/turmeric" class="card-link cream round btn red-bg px-5">Know More</a>
+                        </div>
+                    </div>
                 </div>
 
             </div>
-
-            <div class="col-4">
-                <div class="card">
-                    <img src="/public/images/malunggay.png" class="img-fluid">
-                </div>
-
-            </div>
-
-            <div class="col-4">
-                <div class="card">
-                    <img src="/public/images/lagundi.png" class="img-fluid">
-                </div>
-            </div>
-
         </div>
     </main>
+
+    <footer>
+        <div class="container h-100">
+            <div class="row align-items-center justify-content-center position-relative">
+                <div class="col-12 red text-center">
+                    <h1 class="heading-text">We'd love to hear from you.</h1>
+                    <button class="btn round heading-button red-bg mt-3">
+                        <h2 class="cream">TALK TO US</h2>
+                    </button>
+                    <br>
+                </div>
+
+                <nav class="navbar navbar-expand d-none d-md-block bottom">
+                    <div class="container navbar-nav justify-content-center">
+                        <a class="nav-item nav-link mx-3" href="/">Home</a>
+                        <a class="nav-item nav-link mx-3" href="#">Our Products</a>
+                        <a class="nav-item nav-link mx-3" href="#">About Us</a>
+                        <a class="nav-item nav-link mx-3" href="#">Contact</a>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </footer>
 
     <!-- jQuery -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"
@@ -137,12 +294,7 @@
         integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o"
         crossorigin="anonymous"></script>
 
-    <!-- CircleType -->
-    <script src="/public/js/circletype.min.js"></script>
-
-    <!-- Flickity -->
-    <script src="/public/js/flickity.min.js"></script>
-
+    <!-- Custom Script -->
     <script src="/public/js/products.js"></script>
 </body>
 

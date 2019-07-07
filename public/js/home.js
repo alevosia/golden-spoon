@@ -3,6 +3,16 @@ $(document).ready(function() {
     $('body').animate({ opacity: 1 }, 1000);
 });
 
+/* Waypoints */
+const waypoints = $('.img-fluid').waypoint({
+	handler:function(direction) {
+		if ($(this.element).css('opacity') !== 1) {
+			$(this.element).animate({ opacity: 1 }, 700);
+		}
+	},
+	offset: '50%'
+});
+
 /* Clients Carousel */
 const $carousel = $('.main-gallery');
 

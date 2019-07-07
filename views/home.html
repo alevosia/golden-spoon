@@ -28,15 +28,16 @@
 </head>
 
 <body>
+    <!-- Facebook -->
     <div class="icon-bar">
-        <a href="https://www.facebook.com/Golden-Spoon-Food-Products-1662374450756263/" class="icon-wrapper" target="_blank">
-            <button class="circle icon btn red-bg">
-                <i class="cream fab fa-facebook-f"></i>
-            </button>
+        <a href="https://www.facebook.com/Golden-Spoon-Food-Products-1662374450756263/" class="icon-wrapper"
+            target="_blank">
+            <i class="cream circle icon btn red-bg fab fa-facebook-f"></i>
             <span>Like Us On Facebook!</span>
         </a>
     </div>
 
+    <!-- Top Navigation -->
     <nav class="navbar navbar-expand-md fixed-top">
         <div class="container">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav-links"
@@ -82,14 +83,14 @@
                 <h1>OUR BESTSELLER</h1>
             </button>
         </div>
-        
+
         <!-- Diagonal Background Divider -->
         <section class="divider cream-bg"></section>
 
         <!-- Our Products -->
-        <section class="cream-bg">
-            <div class="container">
-                <div class="row position-relative h-100">
+        <section class="info cream-bg">
+            <div class="container h-100">
+                <div class="row position-relative">
 
                     <div class="col-7 col-lg-6 order-0 order-lg-1 mx-auto d-flex align-items-end align-items-lg-center">
                         <img src="/public/images/salabat.png" class="img-fluid">
@@ -119,10 +120,10 @@
         <section class="divider cream-red-bg"></section>
 
         <!-- About Us -->
-        <section class="red-bg">
-            <div class="container">
+        <section class="info red-bg">
+            <div class="container h-100">
 
-                <div class="row position-relative h-100 text-white ">
+                <div class="row position-relative text-white ">
 
                     <!-- Tea Image -->
                     <div class="col-7 col-lg-6 mx-auto d-flex align-items-end align-items-lg-center">
@@ -154,17 +155,17 @@
         <section class="divider red-cream-bg"></section>
 
         <!-- Other Products -->
-        <section class="cream-bg">
-            <div class="container">
-                <div class="row position-relative h-100">
+        <section class="info cream-bg">
+            <div class="container h-100">
+                <div class="row position-relative justify-content-center">
 
                     <!-- Pancit Canton Image -->
-                    <div class="col-8 col-lg-6 order-0 order-lg-1 mx-auto d-flex align-items-end align-items-lg-center">
+                    <div class="col-8 col-lg-6 order-0 order-lg-1 d-flex align-items-end align-items-lg-center">
                         <img src="/public/images/pancit_canton.png" class="img-fluid">
                     </div>
 
                     <!-- Other Products Text -->
-                    <div class="col-12 col-lg-4 px-3 order-1 order-md-0 mx-auto mt-3 my-lg-auto">
+                    <div class="col-12 col-lg-4 px-3 order-1 order-md-0 mt-3 my-lg-auto">
                         <h1 class="red heading-text">MORE THAN JUST TEA</h1>
                         <p class="red heavy">
                             Besides our herbal products, we offer another
@@ -184,9 +185,9 @@
         <section class="divider cream-red-bg"></section>
 
         <!-- Clients -->
-        <section class="red-bg">
-            <div class="container">
-                <div class="row h-100 justify-content-center align-items-center">
+        <section class="info red-bg">
+            <div class="container h-100">
+                <div class="row justify-content-center align-items-center">
                     <div class="col-12">
 
                         <!-- Clients Heading Text Image -->
@@ -322,30 +323,30 @@
                 </div>
             </div>
         </section>
-
-        <footer>
-            <div class="container">
-                <div class="row h-100 align-items-center justify-content-center">
-                    <div class="col-12 red text-center">
-                        <h1 class="heading-text">We'd love to hear from you.</h1>
-                        <button class="btn round heading-button red-bg mt-3">
-                            <h2 class="cream">TALK TO US</h2>
-                        </button>
-                        <br>
-                    </div>
-
-                    <nav class="navbar navbar-expand d-none d-md-block bottom">
-                        <div class="container navbar-nav justify-content-center">
-                            <a class="nav-item nav-link mx-3" href="/">Home</a>
-                            <a class="nav-item nav-link mx-3" href="#">Our Products</a>
-                            <a class="nav-item nav-link mx-3" href="#">About Us</a>
-                            <a class="nav-item nav-link mx-3" href="#">Contact</a>
-                        </div>
-                    </nav>
-                </div>
-            </div>
-        </footer>
     </main>
+
+    <footer>
+        <div class="container h-100">
+            <div class="row align-items-center justify-content-center position-relative">
+                <div class="col-12 red text-center">
+                    <h1 class="heading-text">We'd love to hear from you.</h1>
+                    <button class="btn round heading-button red-bg mt-3">
+                        <h2 class="cream">TALK TO US</h2>
+                    </button>
+                    <br>
+                </div>
+
+                <nav class="navbar navbar-expand d-none d-md-block bottom">
+                    <div class="container navbar-nav justify-content-center">
+                        <a class="nav-item nav-link mx-3" href="/">Home</a>
+                        <a class="nav-item nav-link mx-3" href="#">Our Products</a>
+                        <a class="nav-item nav-link mx-3" href="#">About Us</a>
+                        <a class="nav-item nav-link mx-3" href="#">Contact</a>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </footer>
 
     <!-- jQuery -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"
@@ -356,12 +357,13 @@
         integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o"
         crossorigin="anonymous"></script>
 
-    <!-- CircleType -->
-    <script src="/public/js/circletype.min.js"></script>
-
+    <!-- Waypoints -->
+    <script src="/public/js/jquery.waypoints.min.js"></script>
+    
     <!-- Flickity -->
     <script src="/public/js/flickity.min.js"></script>
 
+    <!-- Custom Script -->
     <script src="/public/js/home.js"></script>
 </body>
 

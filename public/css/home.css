@@ -64,6 +64,10 @@
 	-moz-transition: all ease-in-out 0.3s;
 }
 
+.icon-wrapper > .btn:hover {
+	color: var(--cream);
+}
+
 .icon-bar:hover > .icon-wrapper, .icon-bar:active > .icon-wrapper {
     transform: translateX(-170px);
 	-webkit-transform: translateX(-170px);
@@ -77,8 +81,16 @@
 	padding-left: 20px;
 }
 
+.info {
+	height: 80vh;
+	min-height: fit-content;
+	padding-top: 50px;
+	padding-bottom: 50px;
+}
+
 .divider {
 	height: 10vh;
+	min-height: 50px;
 }
 
 .round {
@@ -97,7 +109,7 @@
 
 /* Absolute Positions */
 .bottom {
-	bottom: 0;
+	bottom: 0%;
 }
 
 /* Globals */
@@ -105,11 +117,16 @@
 	box-sizing: border-box;
 }
 
+html {
+	height: 100%;
+}
+
 body {
 	position: relative;
 	font-family: 'Khula', sans-serif;
 	line-height: 1.5;
 	max-width: 100%;
+	min-height: 100%;
 	overflow-x: hidden !important;
 }
 
@@ -122,16 +139,13 @@ h2 {
 header {
 	position: relative;
 	height: 97vh;
+	min-height: 400px;
 	min-width: 100%;
 	z-index: 5;
 }
 
 main {
 	position: relative;
-}
-
-main > section {
-	height: 80vh;
 }
 
 footer {
@@ -141,14 +155,15 @@ footer {
 	background-attachment: fixed;
 	background-position: center;
 	background-repeat: no-repeat;
+	position: relative;
 }
 
 /* Navigation Links */
 
 nav.navbar {
 	position: absolute;
-	left: 0;
-	right: 0;
+	left: 0%;
+	right: 0%;
 	z-index: 100;
 }
 
@@ -167,8 +182,8 @@ a.nav-link::before {
 	position: absolute;
 	width: 100%;
 	height: 2px;
-	bottom: 0;
-	left: 0;
+	bottom: 0%;
+	left: 0%;
 	background-color: var(--red);
 	visibility: hidden;
 	-webkit-transform: scaleX(0);
@@ -183,11 +198,21 @@ a.nav-link:hover::before {
 	transform: scaleX(1);
 }
 
+/* Bootstrap */
+.row {
+	height: 100%;
+	min-height: fit-content;
+}
+
+.img-fluid {
+	opacity: 0;
+}
+
 /* Full Screen Background Video */
 .fullscreen-video-wrapper {
 	position: absolute;
-	top: 0;
-	left: 0;
+	top: 0%;
+	left: 0%;
 	width: 100%;
 	height: 100%;
 	overflow: hidden;
@@ -217,8 +242,8 @@ a.nav-link:hover::before {
 /* Logo */
 .logo-wrapper {
 	position: absolute;
-	top: 0;
-	left: 0;
+	top: 0%;
+	left: 0%;
 	width: 100%;
 	height: 100%;
 	overflow: hidden;
@@ -237,8 +262,8 @@ a.nav-link:hover::before {
 
 .banner-text-image-wrapper {
 	position: absolute;
-	top: 0;
-	left: 0;
+	top: 0%;
+	left: 0%;
 	width: 100%;
 	height: 100%;
 	overflow: hidden;
@@ -258,9 +283,9 @@ a.nav-link:hover::before {
 .sticky-wrapper {
 	height: 160px;
 	position: absolute;
-	top: -50;
-	left: 0;
-	right: 0;
+	top: -50px;
+	left: 0%;
+	right: 0%;
 	z-index: 100;
 	text-align: center;
 }
@@ -268,7 +293,7 @@ a.nav-link:hover::before {
 /* Section Headings */
 .heading-text {
 	font-size: 5rem;
-	font-weight: 800;
+	font-weight: 900;
 }
 
 .heading-button {
@@ -336,7 +361,7 @@ img.float-to-right-animation {
 .leaves {
 	position: absolute;
 	width: 400px;
-	bottom: -180;
+	bottom: -220px;
 	z-index: 100;
 }
 
@@ -372,7 +397,7 @@ img.float-to-right-animation {
 
 #bestseller-button {
 	position: sticky;
-	top: 0;
+	top: 0%;
 	background: var(--cream);
 	padding: 15px 30px 15px 30px;
 	z-index: 2;
@@ -410,11 +435,11 @@ img.float-to-right-animation {
 
 	.sticky-wrapper {
 		height: 100px;
-		top: -40;
+		top: -40px;
 	}
 
 	.leaves {
-		bottom: -150;
+		bottom: -190px;
 		width: 250px;
 	}
 
@@ -424,10 +449,6 @@ img.float-to-right-animation {
 
 	.heading-button {
 		padding: 10px 40px 10px 40px;
-	}
-
-	.heading-button > h2 {
-		font-size: 1.15rem;
 	}
 
 	.gallery-cell {
@@ -463,16 +484,12 @@ img.float-to-right-animation {
 	}
 
 	.leaves {
-		bottom: -100;
-		width: 200px;
+		bottom: -180px;
+		width: 225px;
 	}
 
 	.heading-text {
 		font-size: 3rem;
-	}
-
-	.heading-button h2 {
-		font-size: 1rem;
 	}
 
 	#bestseller-button {
@@ -494,9 +511,10 @@ img.float-to-right-animation {
 	.heading-text {
 		font-size: 2.5rem;
 	}
-
-	.heading-button h2 {
-		font-size: 0.8rem;
+	
+	.leaves {
+		bottom: -160px;
+		width: 200px;
 	}
 
 	#bestseller-button {
@@ -519,13 +537,13 @@ img.float-to-right-animation {
 	}
 	
 	.leaves {
-		bottom: -80;
+		bottom: -120px;
 		width: 150px;
 	}
 	
 	.sticky-wrapper {
 		height: 100px;
-		top: -20;
+		top: -20px;
 	}
 
 	#bestseller-button {

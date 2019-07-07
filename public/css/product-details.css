@@ -46,7 +46,7 @@
 
 /* Absolute Positions */
 .bottom {
-	bottom: 0%;
+	bottom: 0;
 }
 
 /* Shapes, Objects & Attributes */
@@ -131,7 +131,7 @@ header {
 	height: 95vh;
 	min-height: 500px;
 	position: relative;
-	background-image: url(/public/images/products_banner.jpg);
+	background-image: url(/public/images/product_details_banner.jpg);
 	background-position: center;
 	background-size: cover;
 }
@@ -147,9 +147,9 @@ header {
 }
 
 /* Navigation */
-nav.navbar {
+header nav.navbar {
 	position: absolute;
-	background: var(--cream);
+	background: var(--red);
 	left: 0;
 	right: 0;
 	z-index: 100;
@@ -159,10 +159,18 @@ a.nav-link {
 	position: relative;
 	text-transform: uppercase;
 	font-size: 1.25rem;
-	color: var(--red);
+	color: var(--cream);
 	font-family: 'PT Sans Narrow', sans-serif;
 	font-weight: 800;
 	letter-spacing: 2px;
+}
+
+main {
+    min-height: 100vh;
+}
+
+footer a.nav-link {
+	color: var(--red);
 }
 
 a.nav-link::before {
@@ -170,14 +178,18 @@ a.nav-link::before {
 	position: absolute;
 	width: 100%;
 	height: 2px;
-	bottom: 0px;
-	left: 0px;
-	background-color: var(--red);
+	bottom: 0;
+	left: 0;
+	background-color: var(--cream);
 	visibility: hidden;
 	-webkit-transform: scaleX(0);
 	transform: scaleX(0);
 	-webkit-transition: all 0.3s ease-in-out 0s;
 	transition: all 0.3s ease-in-out 0s;
+}
+
+footer a.nav-link::before {
+	background-color: var(--red);
 }
 
 a.nav-link:hover::before {
@@ -186,20 +198,22 @@ a.nav-link:hover::before {
 	transform: scaleX(1);
 }
 
-main {
-	padding-top: 30px;
-	padding-bottom: 30px;
+ul {
+	list-style: none;
 }
 
-section.rebranding {
-	height: 20vh;
-	min-height: fit-content;
+ul li:before {
+    content: '✓';
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-right: 5px;
 }
 
-section.showcase {
-	height: 60vh;
-	min-height: fit-content;
-	padding-bottom: 30px;
+ul li {
+    font-size: 1.25rem;
+    font-weight: 600;
+	opacity: 0;
+	margin-bottom: 15px;
 }
 
 footer {
@@ -209,11 +223,13 @@ footer {
 	background-attachment: fixed;
 	background-position: center;
 	background-repeat: no-repeat;
-	position: relative;
 }
 
 footer nav.navbar {
-	background: none;
+	position: absolute;
+	left: 0;
+	right: 0;
+	z-index: 9999;
 }
 
 footer .heading-text {
@@ -222,10 +238,7 @@ footer .heading-text {
 }
 
 /* Bootstrap */
-.row {
-	height: 100%;
-	min-height: fit-content;
-}
+/* ..... */
 
 /* Logo */
 .logo-wrapper {
@@ -243,7 +256,7 @@ footer .heading-text {
 	top: 10%;
 	left: 50%;
 	transform: translate(-50%, -50%);
-	z-index: 100;
+	z-index: 9999;
 }
 
 .header-product-wrapper {
@@ -256,11 +269,11 @@ footer .heading-text {
 
 .header-product-wrapper > img {
 	position: absolute;
-	width: 500px;
+	width: 400px;
 	bottom: -50px;
 	right: 0%;
 	transform: scale(0.95);
-	transition: all ease-in-out 0.3s;
+    transition: all ease-in-out 0.3s;
 }
 
 .header-product-wrapper > img:hover {
@@ -303,6 +316,10 @@ footer .heading-text {
 	letter-spacing: 2px;
 }
 
+.card-img {
+    opacity: 0;
+}
+
 .product-image {
 	transform: scale(0.85);
 	transition: all linear 0.1s;
@@ -342,7 +359,7 @@ footer .heading-text {
 	}
 
 	.header-product-wrapper > img {
-		width: 400px;
+		width: 350px;
 		bottom: -30px;
 	}
 
@@ -357,12 +374,9 @@ footer .heading-text {
 
 /* Small devices (landscape phones, less than 768px) */
 @media (max-width: 767.98px) {
-	
-	nav.navbar {
-		background: rgb(255, 241, 210, 0.5);
-	}
-	
-	.logo-wrapper > a > img {
+    
+    .logo-wrapper > a > img {
+		top: 16.5%;
 		z-index: 99;
 	}
 
@@ -402,12 +416,20 @@ footer .heading-text {
 
 /* Extra small devices (portrait phones, less than 576px) */
 @media (max-width: 575.98px) {
-	.header-text {
-		font-size: 3rem;
-	}
-
-	header {
+    header {
 		height: 97vh;
+    }
+    
+    ul li:before {
+        font-size: 2rem;
+    }
+    
+    ul li {
+        font-size: 1rem;
+    }
+    
+    .header-text {
+		font-size: 3rem;
 	}
 
 	.header-product-wrapper > img {
@@ -424,7 +446,7 @@ footer .heading-text {
 		font-size: 1rem;
 		padding: 10px 3px 10px 3px;
 		letter-spacing: 1px;
-	}
+    }
 }
 
 /* Extra extra small devices (iPhone 5/Galaxy S5) */
@@ -439,6 +461,7 @@ footer .heading-text {
 
 	.header-product-wrapper > img {
 		width: 200px;
+		bottom: -20px;
 	}
 
 	#rebranding-text {

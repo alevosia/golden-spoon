@@ -318,6 +318,10 @@ footer .heading-text {
 	header {
 		height: 97vh;
 	}
+	
+	footer {
+		min-height: 350px;
+	}
 
 	.logo-wrapper > a > img {
 		top: 15%;
@@ -343,6 +347,10 @@ footer .heading-text {
 	
 	nav.navbar {
 		background: rgb(255, 241, 210, 0.5);
+	}
+	
+	footer {
+		min-height: 250px;
 	}
 	
 	.logo-wrapper > a > img {
@@ -380,14 +388,19 @@ footer .heading-text {
 
 /* Extra small devices (portrait phones, less than 576px) */
 @media (max-width: 575.98px) {
-	.header-text {
-		font-size: 3rem;
-	}
-
+	
 	header {
 		height: 97vh;
 	}
-
+	
+	footer {
+		min-height: 200px;
+	}
+	
+	.header-text {
+		font-size: 3rem;
+	}
+	
 	.header-product-wrapper > img {
 		width: 200px;
 		bottom: -20px;

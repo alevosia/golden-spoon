@@ -87,6 +87,30 @@ switch ($request_uri[0]) {
             break;
         }
         
+    case '/products/tanglad':
+        if (file_exists('./views/products/tanglad.html')) {
+            require './views/products/tanglad.html';
+            break;
+        }
+        
+    case '/products/ampalaya':
+        if (file_exists('./views/products/ampalaya.html')) {
+            require './views/products/ampalaya.html';
+            break;
+        }
+        
+    case '/products/turmeric':
+        if (file_exists('./views/products/turmeric.html')) {
+            require './views/products/turmeric.html';
+            break;
+        }
+        
+    case '/products/other':
+        if (file_exists('./views/products/other.html')) {
+            require './views/products/other.html';
+            break;
+        }    
+        
     // Everything else
     default:
         header('HTTP/1.0 404 Not Found');

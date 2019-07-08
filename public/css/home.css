@@ -83,7 +83,7 @@
 
 .info {
 	height: 80vh;
-	min-height: fit-content;
+	min-height: min-content;
 	padding-top: 50px;
 	padding-bottom: 50px;
 }
@@ -139,7 +139,7 @@ h2 {
 header {
 	position: relative;
 	height: 97vh;
-	min-height: 400px;
+	min-height: 550px;
 	min-width: 100%;
 	z-index: 5;
 }
@@ -150,6 +150,7 @@ main {
 
 footer {
 	height: 45vh;
+	min-height: 400px;
 	background: url(/public/images/footer_background.jpg);
 	background-size: cover;
 	background-attachment: fixed;
@@ -199,9 +200,13 @@ a.nav-link:hover::before {
 }
 
 /* Bootstrap */
+.container {
+	min-height: min-content;
+}
+
 .row {
 	height: 100%;
-	min-height: fit-content;
+	min-height: min-content;
 }
 
 .img-fluid {
@@ -416,13 +421,12 @@ img.float-to-right-animation {
 
 /* Media Queries */
 
-/* Large devices (desktops, less than 1200px) */
-@media (max-width: 1199.98px) {
-	
-}
-
 /* Medium devices (tablets, less than 992px) */
 @media (max-width: 991.98px) {
+	
+	footer {
+		min-height: 350px;
+	}
 	
 	.logo-wrapper > a > img {
 		top: 15%;
@@ -471,6 +475,10 @@ img.float-to-right-animation {
 		background: rgb(255, 241, 210, 0.5);
 	}
 	
+	footer {
+		min-height: 250px;
+	}
+	
 	.icon-wrapper {
 		right: -205px;
 	}
@@ -503,6 +511,10 @@ img.float-to-right-animation {
 
 /* Extra small devices (portrait phones, less than 576px) */
 @media (max-width: 575.98px) {
+	
+	footer {
+		min-height: 200px;
+	}
 	
 	.banner-text-image-wrapper > img {
 		width: 25rem;

@@ -420,6 +420,13 @@ img.float-to-right-animation {
 }
 
 /* Media Queries */
+/* Large devices (desktops, less than 1200px) */
+@media (max-width: 1199.98px) {
+	.leaves {
+		bottom: -180px;
+		width: 300px;
+	}
+}
 
 /* Medium devices (tablets, less than 992px) */
 @media (max-width: 991.98px) {
@@ -443,7 +450,7 @@ img.float-to-right-animation {
 	}
 
 	.leaves {
-		bottom: -190px;
+		bottom: -180px;
 		width: 250px;
 	}
 

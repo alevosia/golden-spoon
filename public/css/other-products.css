@@ -236,7 +236,7 @@ footer .heading-text {
 .logo-wrapper > a > img {
 	position: absolute;
 	width: 12.25rem;
-	top: 10%;
+	top: 70px;
 	left: 50%;
 	transform: translate(-50%, -50%);
 	z-index: 100;
@@ -324,8 +324,7 @@ footer .heading-text {
 	}
 
 	.logo-wrapper > a > img {
-		top: 15%;
-		width: 12rem;
+		width: 11rem;
 	}
 
 	.header-text {
@@ -346,15 +345,11 @@ footer .heading-text {
 @media (max-width: 767.98px) {
 	
 	nav.navbar {
-		background: rgb(255, 241, 210, 0.5);
+		background: rgb(255, 241, 210, 0.85);
 	}
 	
 	footer {
 		min-height: 250px;
-	}
-	
-	.logo-wrapper > a > img {
-		z-index: 99;
 	}
 
 	.header-text {
@@ -397,6 +392,11 @@ footer .heading-text {
 		min-height: 200px;
 	}
 	
+	.logo-wrapper > a > img {
+		top: 60px;
+		width: 11rem;
+	}
+	
 	.header-text {
 		font-size: 3rem;
 	}
@@ -414,6 +414,7 @@ footer .heading-text {
 /* Extra extra small devices (iPhone 5/Galaxy S5) */
 @media (max-width: 375px) {
 	.logo-wrapper > a > img {
+		top: 55px;
 		width: 8rem;
 	}
 

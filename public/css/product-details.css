@@ -254,7 +254,7 @@ footer a.nav-link {
 .logo-wrapper > a > img {
 	position: absolute;
 	width: 12.25rem;
-	top: 8%;
+	top: 70px;
 	left: 50%;
 	transform: translate(-50%, -50%);
 	z-index: 9999;
@@ -347,8 +347,7 @@ footer a.nav-link {
 	}
 
 	.logo-wrapper > a > img {
-		top: 15%;
-		width: 12rem;
+		width: 11rem;
 	}
 
 	.header-text {
@@ -368,13 +367,18 @@ footer a.nav-link {
 /* Small devices (landscape phones, less than 768px) */
 @media (max-width: 767.98px) {
 	
+	a.nav-link:hover::before {
+		visibility: hidden;
+		-webkit-transform: none;
+		transform: none;
+	}
+	
 	footer {
 		min-height: 250px;
 	}
     
     .logo-wrapper > a > img {
-		top: 16.5%;
-		z-index: 99;
+		top: 65px;
 	}
 
 	.header-text {
@@ -419,7 +423,12 @@ footer a.nav-link {
     
     ul li {
         font-size: 1rem;
-    }
+	}
+	
+	.logo-wrapper > a > img {
+		top: 55px;
+		width: 10rem;
+	}
     
     .header-text {
 		font-size: 3rem;
@@ -438,6 +447,7 @@ footer a.nav-link {
 /* Extra extra small devices (iPhone 5/Galaxy S5) */
 @media (max-width: 375px) {
 	.logo-wrapper > a > img {
+		top: 50px;
 		width: 8rem;
 	}
 

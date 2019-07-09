@@ -141,7 +141,6 @@ header {
 	height: 97vh;
 	min-height: 550px;
 	min-width: 100%;
-	z-index: 5;
 }
 
 main {
@@ -252,13 +251,12 @@ a.nav-link:hover::before {
 	width: 100%;
 	height: 100%;
 	overflow: hidden;
-	z-index: 15;
 }
 
 .logo-wrapper > a > img {
 	position: absolute;
 	width: 12rem;
-	top: 12.5%;
+	top: 100px;
 	left: 50%;
 	transform: translate(-50%, -50%);
 	-webkit-transform: translate(-50%, -50%);
@@ -405,7 +403,7 @@ img.float-to-right-animation {
 	top: 0%;
 	background: var(--cream);
 	padding: 15px 30px 15px 30px;
-	z-index: 2;
+	z-index: 100;
 }
 
 #bestseller-button:hover {
@@ -436,8 +434,7 @@ img.float-to-right-animation {
 	}
 	
 	.logo-wrapper > a > img {
-		top: 15%;
-		width: 12rem;
+		width: 11rem;
 	}
 
 	.banner-text-image-wrapper > img {
@@ -479,11 +476,23 @@ img.float-to-right-animation {
 @media (max-width: 767.98px) {
 	
 	nav.navbar {
-		background: rgb(255, 241, 210, 0.5);
+		background: rgb(255, 241, 210, 0.85);
+	}
+	
+	a.nav-link:hover::before {
+		visibility: hidden;
+		-webkit-transform: none;
+		transform: none;
 	}
 	
 	footer {
 		min-height: 250px;
+	}
+	
+	.logo-wrapper > a > img {
+		top: 60px;
+		width: 10rem;
+		z-index: 105;
 	}
 	
 	.icon-wrapper {
@@ -548,7 +557,8 @@ img.float-to-right-animation {
 /* Extra extra small devices (iPhone 5/Galaxy S5) */
 @media (max-width: 375px) {
 	.logo-wrapper > a > img {
-		width: 7rem;
+		top: 55px;
+		width: 8rem;
 	}
 
 	.banner-text-image-wrapper > img {

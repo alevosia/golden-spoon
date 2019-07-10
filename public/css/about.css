@@ -28,11 +28,6 @@
 	background: var(--cream);
 }
 
-/* Font-Weight */
-.heavy {
-	font-weight: 600;
-}
-
 /* Border Radius */
 .round {
 	border-radius: 50px;
@@ -46,7 +41,7 @@
 
 /* Absolute Positions */
 .bottom {
-	bottom: 0;
+	bottom: 0%;
 }
 
 /* Shapes, Objects & Attributes */
@@ -128,28 +123,18 @@ p {
 }
 
 header {
-	height: 95vh;
+	height: 100vh;
 	min-height: 550px;
 	position: relative;
-	background-image: url(/public/images/product_details_banner.jpg);
+	background-image: url(/public/images/about_us_banner.jpg);
 	background-position: center;
 	background-size: cover;
 }
 
-.header-text {
-	font-size: 8rem;
-	font-weight: 800;
-	text-shadow: 2px 0 var(--red);
-	text-transform: uppercase;
-	margin: 0;
-	letter-spacing: 3px;
-	line-height: 0.8;
-}
-
 /* Navigation */
-header nav.navbar {
+nav.navbar {
 	position: absolute;
-	background: var(--red);
+	background: var(--cream);
 	left: 0;
 	right: 0;
 	z-index: 100;
@@ -159,14 +144,10 @@ a.nav-link {
 	position: relative;
 	text-transform: uppercase;
 	font-size: 1.25rem;
-	color: var(--cream);
+	color: var(--red);
 	font-family: 'PT Sans Narrow', sans-serif;
 	font-weight: 800;
 	letter-spacing: 2px;
-}
-
-main {
-    min-height: 100vh;
 }
 
 a.nav-link::before {
@@ -174,9 +155,9 @@ a.nav-link::before {
 	position: absolute;
 	width: 100%;
 	height: 2px;
-	bottom: 0;
-	left: 0;
-	background-color: var(--cream);
+	bottom: 0px;
+	left: 0px;
+	background-color: var(--red);
 	visibility: hidden;
 	-webkit-transform: scaleX(0);
 	transform: scaleX(0);
@@ -190,32 +171,30 @@ a.nav-link:hover::before {
 	transform: scaleX(1);
 }
 
-ul {
-	list-style: none;
+main {
+	height: 100%;
+	min-height: min-content;
+	padding-top: 50px;
+	padding-bottom: 50px;
 }
 
-ul li:before {
-    content: '✓';
-    font-size: 2.5rem;
-    font-weight: 600;
-    margin-right: 5px;
-}
-
-ul li {
-    font-size: 1.25rem;
-    font-weight: 600;
-	opacity: 0;
-	margin-bottom: 15px;
+main p {
+	font-size: 1.25rem;
 }
 
 footer {
-	height: 45vh;
+	height: 40vh;
 	min-height: 400px;
 	background: url(/public/images/footer_background.jpg);
 	background-size: cover;
 	background-attachment: fixed;
 	background-position: center;
 	background-repeat: no-repeat;
+	position: relative;
+}
+
+footer nav.navbar {
+	background: none;
 }
 
 footer .heading-text {
@@ -223,23 +202,15 @@ footer .heading-text {
 	letter-spacing: 0;
 }
 
-footer nav.navbar {
-	position: absolute;
-	left: 0;
-	right: 0;
-	z-index: 9999;
-}
-
-footer a.nav-link::before {
-	background-color: var(--red);
-}
-
-footer a.nav-link {
-	color: var(--red);
-}
-
 /* Bootstrap */
-/* ..... */
+.container {
+	min-height: 100%;
+}
+
+.row {
+	height: 100%;
+	min-height: min-content;
+}
 
 /* Logo */
 .logo-wrapper {
@@ -257,31 +228,21 @@ footer a.nav-link {
 	top: 70px;
 	left: 50%;
 	transform: translate(-50%, -50%);
-	z-index: 9999;
+	z-index: 100;
 }
 
-.header-product-wrapper {
-	position: absolute;
-	width: 100%;
-	height: 100%;
-	top: 0%;
-	left: 0%;
-}
-
-.header-product-wrapper > img {
-	position: absolute;
-	width: 400px;
-	bottom: -50px;
-	right: 0%;
-	transform: scale(0.95);
-    transition: all ease-in-out 0.3s;
-}
-
-.header-product-wrapper > img:hover {
-	transform: scale(1.05);
+.header-text {
+	font-size: 8rem;
+	font-weight: 800;
+	text-shadow: 2px 0 var(--red);
+	text-transform: uppercase;
+	margin: 0;
+	letter-spacing: 3px;
+	line-height: 0.8;
 }
 
 .heading-text {
+	opacity: 0; /* Waypoints */
 	font-size: 5rem;
 	font-weight: 900;
 	text-shadow: 2px 0 var(--red);
@@ -299,51 +260,84 @@ footer a.nav-link {
 	font-weight: 800;
 }
 
-.card {
-	border: none;
-	background: none;
+.history {
+	position: relative;
+	height: 150px;
+	margin: 0px;
+	margin-bottom: 30px;
+	padding: 20px 20px 20px 20px;
+	align-items: center;
 }
 
-.card-title {
-	text-transform: uppercase;
-	font-weight: 900;
-	text-shadow: 1px 0 var(--red);
-	letter-spacing: 2px;
-	margin-bottom: 3px;
+.history:nth-child(odd) {
+	border-right: 5px solid var(--red);
+	border-radius: 70px;
+	box-shadow: 10px 0.4rem var(--red);
 }
 
-.card-link {
-	text-transform: uppercase;
-	letter-spacing: 2px;
+.history:nth-child(even) {
+	border-left: 3px solid var(--red);
+	border-radius: 70px;
+	box-shadow: -10px 0.4rem var(--red);
 }
 
-.card-img {
-    opacity: 0;
+.history p {
+	margin-bottom: 0;
 }
 
-.product-image {
-	transform: scale(0.85);
-	transition: all linear 0.1s;
+.history .round {
+	border-radius: 50px;
+	position: relative;
+	padding: 12px 0px 12px 30px;
+	padding-left: 10%;
+	background: var(--red);
+	color: var(--cream);
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	font-size: 1.15rem;
 }
 
-.product-image:hover {
-	transform: scale(1);
+.history .circle {
+	background: gold;
+	color: var(--red);
+	position: absolute;
+	left: 0;
+	top: 0px;
+	height: 50px;
+	width: 50px;
+	padding-top: 5px;
+	padding-left: 2px;
+	box-shadow: 2px 0px 0 3px var(--cream);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.fadein-left {
+	opacity: 0;
+	transform: translateX(-105%);
+	transition: all 1s ease-in-out;
+}
+
+.fadein-right {
+	opacity: 0;
+	transform: translateX(105%);
+	transition: all 1s ease-in-out;
+}
+
+.fadein-left.visible, .fadein-right.visible {
+	opacity: 1;
+	transform: translateX(0%);
 }
 
 /* Media Queries */
 
-/* Large devices (desktops, less than 1200px) */
-@media (max-width: 1199.98px) {
-}
-
 /* Medium devices (tablets, less than 992px) */
 @media (max-width: 991.98px) {
-	header {
-		height: 97vh;
-	}
 	
 	footer {
-		min-height: 350px;	
+		min-height: 350px;
 	}
 
 	.logo-wrapper > a > img {
@@ -354,18 +348,40 @@ footer a.nav-link {
 		font-size: 6rem;
 	}
 
-	.header-product-wrapper > img {
-		width: 350px;
-		bottom: -30px;
-	}
-
 	.heading-text {
 		font-size: 4.5rem;
+	}
+	
+	.history {
+		height: 120px;
+		padding: 10px 10px 10px 10px;
+	}
+	
+	.history p {
+		font-size: 1rem;
+	}
+	
+	.history .round {
+		padding-top: 6px;
+		padding-bottom: 4px;
+	}
+	
+	.history .circle {
+		height: 38px;
+		width: 38px;
+	}
+	
+	.history .round.sm-text {
+		font-size: 1rem;
 	}
 }
 
 /* Small devices (landscape phones, less than 768px) */
 @media (max-width: 767.98px) {
+	
+	nav.navbar {
+		background: rgb(255, 241, 210, 0.85);
+	}
 	
 	a.nav-link:hover::before {
 		visibility: hidden;
@@ -373,27 +389,22 @@ footer a.nav-link {
 		transform: none;
 	}
 	
+	main p {
+		font-size: 1.15rem;
+	}
+	
 	footer {
 		min-height: 250px;
-	}
-    
-    .logo-wrapper > a > img {
-		top: 65px;
 	}
 
 	.header-text {
 		font-size: 4rem;
 	}
 
-	.header-product-wrapper > img {
-		width: 250px;
-		bottom: -30px;
-	}
-
 	.heading-text {
 		font-size: 3rem;
 	}
-
+	
 	.heading-button {
 		padding-right: 3rem;
 		padding-left: 3rem;
@@ -412,6 +423,35 @@ footer a.nav-link {
 	.icon {
 		font-size: 1.5rem;
 	}
+	
+	.history {
+		padding: 10px 10px 10px 10px;
+	}
+	
+	.history:nth-child(odd) {
+		box-shadow: 5px 0.4rem var(--red);
+	}
+	
+	.history:nth-child(even) {
+		box-shadow: -5px 0.4rem var(--red);
+	}
+	
+	.history .circle {
+		width: 32px;
+		height: 32px;
+		top: -1px;
+	}
+	
+	.history .round {
+		width: 40%;
+		padding: 5px 0px 0px 0px;
+		font-size: 1rem;
+		margin-bottom: 10px;
+	}
+	
+	.history p {
+		font-size: 0.9rem;
+	}
 }
 
 /* Extra small devices (portrait phones, less than 576px) */
@@ -420,46 +460,70 @@ footer a.nav-link {
 	footer {
 		min-height: 200px;
 	}
-    
-    ul li:before {
-        font-size: 2rem;
-    }
-    
-    ul li {
-        font-size: 1rem;
+	
+	main p {
+		font-size: 1rem;
 	}
 	
 	.logo-wrapper > a > img {
-		top: 55px;
-		width: 10rem;
+		top: 60px;
+		width: 11rem;
 	}
-    
-    .header-text {
+	
+	.header-text {
 		font-size: 3rem;
-	}
-
-	.header-product-wrapper > img {
-		width: 200px;
-		bottom: -20px;
 	}
 
 	.heading-text {
 		font-size: 2.5rem;
 	}
+	
+	.history p {
+		font-size: 0.8rem;
+	}
+	
+	.history .circle {
+		width: 27px;
+		height: 27px;
+	}
+	
+	.history .round {
+		width: 45%;
+		padding: 3px 0px 0px 0px;
+		font-size: 0.9rem;
+	}
 }
 
 /* Extra extra small devices (iPhone 5/Galaxy S5) */
 @media (max-width: 375px) {
+	
+	main p {
+		font-size: 0.9rem;
+	}
+	
 	.logo-wrapper > a > img {
-		top: 50px;
+		top: 55px;
 		width: 8rem;
 	}
 
 	.header-text {
 		font-size: 2.5rem;
 	}
-
-	.header-product-wrapper > img {
-		width: 180px;
+	
+	.history p {
+		font-size: 0.75rem;
 	}
+	
+	.history .circle {
+		width: 25px;
+		height: 25px;
+		top: -2px;
+	}
+	
+	.history .round {
+		width: 50%;
+		padding-top: 3px;
+		font-size: 0.8rem;
+	}
+	
 }

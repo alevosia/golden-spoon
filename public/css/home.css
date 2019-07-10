@@ -515,6 +515,17 @@ img.float-to-right-animation {
 	.heading-text {
 		font-size: 3rem;
 	}
+	
+	.heading-button {
+		padding-right: 3rem;
+		padding-left: 3rem;
+		padding-top: 6px;
+		padding-bottom: 6px;
+	}
+	
+	.heading-button > h2 {
+		font-size: 1rem;
+	}
 
 	#bestseller-button {
 		padding: 10px 20px 10px 20px;

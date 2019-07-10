@@ -2,59 +2,24 @@
 <html>
 
 <head>
-    <style>
-        :root {
-            --red: #cd2229;
-            --cream: #fff1d2;
-        }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-        html,
-        body {
-            height: 100%;
-        }
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/public/css/404.css">
 
-        body {
-            background-image: url(/public/images/tea_pouring.gif);
-            background-size: cover;
-            background-position: center;
-            overflow: hidden;
-        }
-
-        main {
-            height: 100%;
-            overflow: hidden;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
-
-        main>h1 {
-            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-            font-size: 2.5rem;
-            font-weight: 200;
-            color: var(--cream);
-            text-align: center;
-            text-shadow: 2px 2px var(--red);
-        }
-
-        main>button {
-            padding: 10px 20px 10px 20px;
-            border-radius: 40px;
-            background-color: rgb(205, 34, 41, 0.85);
-            text-decoration: none;
-            color: var(--cream);
-            border: 1px var(--cream) solid;
-            font-size: 1rem;
-        }
-    </style>
     <title>404 Not Found</title>
 </head>
 
 <body>
     <main>
         <h1>We couldn't find what you're looking for :(</h1>
-        <button onclick="goBack()">Go Back</a>
+        <p>
+            If you think it's us, not you, please do tell us at 
+            <a href="mailto:holla@simmer-studios.com">holla@simmer-studios.com</a>
+        </p>
+        <button class="btn" onclick="goBack()">Go Back</a></button>
     </main>
 
     <script>

@@ -405,6 +405,10 @@ footer .heading-text {
 		padding-top: 6px;
 		padding-bottom: 6px;
 	}
+	
+	.heading-button > h2 {
+		font-size: 1rem;
+	}
 
 	.icon-wrapper {
 		right: -205px;

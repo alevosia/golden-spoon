@@ -242,12 +242,15 @@ footer .heading-text {
 }
 
 .heading-text {
-	opacity: 0; /* Waypoints */
 	font-size: 5rem;
 	font-weight: 900;
 	text-shadow: 2px 0 var(--red);
 	letter-spacing: 2px;
 	font-weight: bold;
+}
+
+main .heading-text {
+	opacity: 0; /* Waypoints */
 }
 
 .heading-button {
@@ -332,7 +335,15 @@ footer .heading-text {
 }
 
 /* Media Queries */
+
+/* Large Devices */
 @media (max-width: 1199.98px) {
+	
+	main {
+		padding-top: 45px;
+		padding-bottom: 45px;
+	}
+	
 	.history:nth-child(odd) {
 		box-shadow: 5px 0.4rem var(--red);
 	}
@@ -344,6 +355,11 @@ footer .heading-text {
 
 /* Medium devices (tablets, less than 992px) */
 @media (max-width: 991.98px) {
+	
+	main {
+		padding-top: 40px;
+		padding-bottom: 40px;
+	}
 	
 	footer {
 		min-height: 350px;
@@ -402,6 +418,11 @@ footer .heading-text {
 		visibility: hidden;
 		-webkit-transform: none;
 		transform: none;
+	}
+	
+	main {
+		padding-top: 40px;
+		padding-bottom: 40px;
 	}
 	
 	main p {
@@ -471,6 +492,11 @@ footer .heading-text {
 /* Extra small devices (portrait phones, less than 576px) */
 @media (max-width: 575.98px) {
 	
+	main {
+		padding-top: 35px;
+		padding-bottom: 35px;
+	}
+	
 	footer {
 		min-height: 200px;
 	}
@@ -518,6 +544,11 @@ footer .heading-text {
 
 /* Extra extra small devices (iPhone 5/Galaxy S5) */
 @media (max-width: 375px) {
+	
+	main {
+		padding-top: 20px;
+		padding-bottom: 20px;
+	}
 	
 	main p {
 		font-size: 0.9rem;

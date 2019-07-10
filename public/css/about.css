@@ -272,13 +272,13 @@ footer .heading-text {
 .history:nth-child(odd) {
 	border-right: 5px solid var(--red);
 	border-radius: 70px;
-	box-shadow: 10px 0.4rem var(--red);
+	box-shadow: 6px 0.4rem var(--red);
 }
 
 .history:nth-child(even) {
 	border-left: 3px solid var(--red);
 	border-radius: 70px;
-	box-shadow: -10px 0.4rem var(--red);
+	box-shadow: -6px 0.4rem var(--red);
 }
 
 .history p {
@@ -295,7 +295,7 @@ footer .heading-text {
 	width: 100%;
 	margin-left: auto;
 	margin-right: auto;
-	font-size: 1.15rem;
+	font-size: 1.25rem;
 }
 
 .history .circle {
@@ -332,6 +332,15 @@ footer .heading-text {
 }
 
 /* Media Queries */
+@media (max-width: 1199.98px) {
+	.history:nth-child(odd) {
+		box-shadow: 5px 0.4rem var(--red);
+	}
+	
+	.history:nth-child(even) {
+		box-shadow: -5px 0.4rem var(--red);
+	}
+}
 
 /* Medium devices (tablets, less than 992px) */
 @media (max-width: 991.98px) {
@@ -357,6 +366,14 @@ footer .heading-text {
 		padding: 10px 10px 10px 10px;
 	}
 	
+	.history:nth-child(odd) {
+		box-shadow: 4px 0.3rem var(--red);
+	}
+	
+	.history:nth-child(even) {
+		box-shadow: -4px 0.3rem var(--red);
+	}
+	
 	.history p {
 		font-size: 1rem;
 	}
@@ -364,6 +381,7 @@ footer .heading-text {
 	.history .round {
 		padding-top: 6px;
 		padding-bottom: 4px;
+		font-size: 1.15rem;
 	}
 	
 	.history .circle {
@@ -429,11 +447,11 @@ footer .heading-text {
 	}
 	
 	.history:nth-child(odd) {
-		box-shadow: 5px 0.4rem var(--red);
+		box-shadow: 3px 0.3rem var(--red);
 	}
 	
 	.history:nth-child(even) {
-		box-shadow: -5px 0.4rem var(--red);
+		box-shadow: -3px 0.3rem var(--red);
 	}
 	
 	.history .circle {
@@ -482,6 +500,14 @@ footer .heading-text {
 		font-size: 0.8rem;
 	}
 	
+	.history:nth-child(odd) {
+		box-shadow: 2px 0.3rem var(--red);
+	}
+	
+	.history:nth-child(even) {
+		box-shadow: -2px 0.3rem var(--red);
+	}
+	
 	.history .circle {
 		width: 27px;
 		height: 27px;
@@ -512,6 +538,14 @@ footer .heading-text {
 	
 	.history p {
 		font-size: 0.75rem;
+	}
+	
+	.history:nth-child(odd) {
+		box-shadow: 1px 0.3rem var(--red);
+	}
+	
+	.history:nth-child(even) {
+		box-shadow: -1px 0.3rem var(--red);
 	}
 	
 	.history .circle {

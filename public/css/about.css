@@ -288,7 +288,7 @@ footer .heading-text {
 .history .round {
 	border-radius: 50px;
 	position: relative;
-	padding: 12px 0px 12px 30px;
+	padding: 11px 0px 11px 30px;
 	padding-left: 10%;
 	background: var(--red);
 	color: var(--cream);
@@ -303,7 +303,7 @@ footer .heading-text {
 	color: var(--red);
 	position: absolute;
 	left: 0;
-	top: 0px;
+	top: 1px;
 	height: 50px;
 	width: 50px;
 	padding-top: 5px;
@@ -387,10 +387,7 @@ footer .heading-text {
 	.history .circle {
 		height: 38px;
 		width: 38px;
-	}
-	
-	.history .round.sm-text {
-		font-size: 1rem;
+		top: -1px;
 	}
 }
 
@@ -457,7 +454,6 @@ footer .heading-text {
 	.history .circle {
 		width: 32px;
 		height: 32px;
-		top: -1px;
 	}
 	
 	.history .round {

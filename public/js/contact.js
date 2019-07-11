@@ -32,7 +32,10 @@ function sendData(firstname, lastname, email, subject, message, grecaptchaRespon
         }
         
 	}).done(function(status) {
+		
 		$('#submit-button').html('Send Message');
+		
+		grecaptcha.reset();
 		
 		if (status === "passed") {
 			resetForm();

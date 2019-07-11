@@ -124,7 +124,7 @@ p {
 
 header {
 	height: 95vh;
-	min-height: 550px;
+	min-height: 580px;
 	position: relative;
 	background-image: url(/public/images/contact_banner.jpg);
 	background-position: center;
@@ -292,6 +292,23 @@ footer .heading-text {
 	z-index: 100;
 }
 
+.contact-number-wrapper {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0%;
+	left: 0%;
+}
+
+.contact-number-wrapper > h2 {
+	font-size: 3rem;
+	font-weight: 600;
+	color: var(--red);
+	position: absolute;
+	bottom: 30px;
+	left: 60px;
+}
+
 .header-product-wrapper {
 	position: absolute;
 	width: 100%;
@@ -360,6 +377,7 @@ footer .heading-text {
 		padding: 10px 10px 10px 12px;
 	}
 	
+	
 	#submit-button {
 		font-size: 1rem;
 	}
@@ -370,6 +388,12 @@ footer .heading-text {
 	
 	.header-text + p {
 		font-size: 1.4rem;
+	}
+	
+	.contact-number-wrapper > h2 {
+		font-size: 2.75rem;
+		bottom: 20px;
+		left: 50px;
 	}
 	
 	.header-product-wrapper > img {
@@ -423,9 +447,15 @@ footer .heading-text {
 	.header-text + p {
 		font-size: 1.3rem;
 	}
+	
+	.contact-number-wrapper > h2 {
+		font-size: 2.25rem;
+		bottom: 30px;
+		left: 15px;
+	}
 
 	.header-product-wrapper > img {
-		width: 400px;
+		width: 380px;
 		bottom: -30px;
 	}
 
@@ -484,9 +514,15 @@ footer .heading-text {
 	.header-text + p {
 		font-size: 1.2rem;
 	}
+	
+	.contact-number-wrapper > h2 {
+		font-size: 2rem;
+		bottom: 23%;
+		left: 20px;
+	}
 
 	.header-product-wrapper > img {
-		width: 300px;
+		width: 280px;
 		bottom: -30px;
 	}
 
@@ -560,6 +596,11 @@ footer .heading-text {
 	.header-text + p {
 		font-size: 1.15rem;
 	}
+	
+	.contact-number-wrapper > h2 {
+		font-size: 1.5rem;
+		bottom: 20%;
+	}
 
 	.header-product-wrapper > img {
 		width: 250px;
@@ -612,6 +653,10 @@ footer .heading-text {
 	
 	.header-text + p {
 		font-size: 1rem;
+	}
+	
+	.contact-number-wrapper > h2 {
+		font-size: 1.15rem;
 	}
 
 	.header-product-wrapper > img {

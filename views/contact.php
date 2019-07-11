@@ -1,4 +1,5 @@
 <?php
+   
     function myExceptionHandler($exception) {
         echo "Exception: Failed to send.";
         die();
@@ -8,7 +9,7 @@
         echo "Error: Failed to send.";
         die();
     }
-    
+   
     set_exception_handler('myExceptionHandler');
     set_error_handler('myErrorHandler');
     
@@ -25,14 +26,20 @@
             $user_ip = $_SERVER['REMOTE_ADDR'];
             
             $email_from = "info@goldenspoon.ph";
-            $email_subject = "Golden Spoon - $user_subject";
-            $email_body = "Name: $user_firstname $user_lastname \n" .
-                          "Message:\n.$user_message";
+            $email_subject = "Golden Spoon - " . $user_subject;
+            $email_body = "Full Name: $user_firstname $user_lastname \n\n" .
+                          "Message:\n" . $user_message;
                         
             $email_to = "alexanderpaul.marinas@gmail.com";
             
-            $headers =  "From: $email_from \r\n";
-            $headers .= "Reply-To: $user_email \r\n";
+            $headers =  "From: $email_from\r\n";
+            $headers .= "Reply-To: $user_email\r\n";
+            $headers .= "Return-Path: $email_from\r\n";
+            $headers .= "Organization: Golden Spoon\r\n";
+            $headers .= "MIME-Version: 1.0\r\n";
+            $headers .= "Content-type: text/plain; charset=iso-8859-1\r\n";
+            $headers .= "X-Priority: 3\r\n";
+            $headers .= "X-Mailer: PHP". phpversion() ."\r\n" ;
             
             $secretKey = "6LeWIq0UAAAAAMlQQALV_BCGf--MB66eKb9lpUfd";
             $responseToken = $_POST['g-recaptcha-response'];
@@ -42,10 +49,9 @@
             $response = json_decode($response);
             
             if ($response->success) {
-                try {
-                    mail($email_to, $email_subject, $email_body, $headers);
+                if (mail($email_to, $email_subject, $email_body, $headers)) {
                     echo "passed";
-                } catch (Exception $e) {
+                } else {
                     echo "failed";
                 }
             } else {

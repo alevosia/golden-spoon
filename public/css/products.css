@@ -28,11 +28,6 @@
 	background: var(--cream);
 }
 
-/* Font-Weight */
-.heavy {
-	font-weight: 600;
-}
-
 /* Border Radius */
 .round {
 	border-radius: 50px;
@@ -134,6 +129,7 @@ header {
 	background-image: url(/public/images/products_banner.jpg);
 	background-position: center;
 	background-size: cover;
+	background-attachment: fixed;
 }
 
 .header-text {

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <meta name="keywords" content="golden spoon, contact, email">
+    <meta name="description"
+        content="Herbal tea and food products in the highest standard at the most reasonable cost.">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.1/css/all.min.css"
+        integrity="sha256-7rF6RaSKyh16288E3hVdzQtHyzatA2MQRGu0cf6pqqM=" crossorigin="anonymous" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/public/css/contact.css">
+
+    <!-- reCAPTCHA -->
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-143681013-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-143681013-1');
+    </script>
+    
+    <title>Golden Spoon • Contact</title>
+</head>
+
+<body>
+    <!-- Facebook -->
+    <div class="icon-bar">
+        <a href="https://www.facebook.com/Golden-Spoon-Food-Products-1662374450756263/" class="icon-wrapper"
+            target="_blank">
+            <i class="cream circle icon btn red-bg fab fa-facebook-f"></i>
+            <span>Like Us On Facebook!</span>
+        </a>
+    </div>
+
+    <header>
+
+        <!-- Header Navigation -->
+        <nav class="navbar navbar-expand-md">
+            <div class="container">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav-links"
+                    aria-label="Toggle navigation">
+                    <img class="img-fluid" src="/public/images/menu_bars.png" width="30px" alt="menu bars">
+                </button>
+                <div class="collapse navbar-collapse" id="nav-links">
+                    <div class="navbar-nav mr-auto">
+                        <a class="nav-item nav-link mr-5" href="/">Home</a>
+                        <a class="nav-item nav-link" href="/products">Our Products</a>
+                    </div>
+                    <div class="navbar-nav ml-auto">
+                        <a class="nav-item nav-link" href="/about">About Us</a>
+                        <a class="nav-item nav-link ml-md-5" href="/contact">Contact</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Logo -->
+        <div class="logo-wrapper">
+            <a href="/">
+                <img src="/public/images/logo_with_cream.png" alt="logo">
+            </a>
+        </div>
+
+        <!-- Header Information -->
+        <div class="container h-100 position-relative">
+            <div class="row d-flex align-items-center">
+                <div class="col-12 red">
+                    <h1 class="header-text">Let us know what you think.</h1>
+                    <p class="mt-4">
+                        Tell us your suggestions or inquiries by filling in the form below.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Absolutely Positioned -->
+            <div class="header-product-wrapper">
+                <img src="/public/images/tea.png" alt="tea">
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <form class="pt-3 pt-md-5">
+
+            <!-- Name -->
+            <div class="row justify-content-center text-center mb-3 mb-lg-4">
+                <div class="col-12 col-md-6 mb-3 mb-md-0 text-md-right">
+                    <input type="text" name="firstname" placeholder="First Name" id="firstname" required>
+                </div>
+                <div class="col-12 col-md-6 text-md-left">
+                    <input type="text" name="lastname" placeholder="Last Name" id="lastname" required>
+                </div>
+            </div>
+
+            <!-- Email Address -->
+            <div class="row justify-content-center text-center mb-3 mb-lg-4">
+                <div class="col-12">
+                    <input type="email" name="email" placeholder="Email Address" id="email" required>
+                </div>
+            </div>
+
+            <!-- Subject -->
+            <div class="row justify-content-center text-center mb-3 mb-lg-4">
+                <div class="col-12">
+                    <input type="text" name="subject" placeholder="Subject" class="valid" id="subject" required>
+                </div>
+            </div>
+
+            <!-- Message Texarea -->
+            <div class="row justify-content-center text-center mb-3 mb-lg-4">
+                <div class="col-12">
+                    <textarea name="message" placeholder="Message" id="message" required draggable="false"
+                        spellcheck="false"></textarea>
+                    <div>1000 characters left</div>
+                </div>
+            </div>
+
+            <!-- reCAPTCHA -->
+            <div class="row justify-content-center text-center mb-3">
+                <div class="g-recaptcha" data-sitekey="6LeWIq0UAAAAAESjrvscSZMkdwZY2_WwQQtXZu-2">
+                </div>
+            </div>
+
+            <!-- Submit Button -->
+            <div class="row justify-content-center text-center mb-1">
+                <button type="button" class="red-bg btn round cream" id="submit-button">Send Message</button>
+            </div>
+            <br />
+            <div class="status text-center"></div>
+        </form>
+    </main>
+
+    <footer>
+        <div class="container h-100">
+            <div class="row align-items-center justify-content-center position-relative">
+                <div class="col-12 red text-center">
+                    <h1 class="heading-text">We'd love to hear from you.</h1>
+                    <button class="btn round heading-button red-bg mt-3">
+                        <h2 class="cream">TALK TO US</h2>
+                    </button>
+                    <br>
+                </div>
+
+                <nav class="navbar navbar-expand d-none d-md-block bottom">
+                    <div class="container navbar-nav justify-content-center">
+                        <a class="nav-item nav-link mx-3" href="/">Home</a>
+                        <a class="nav-item nav-link mx-3" href="/products">Our Products</a>
+                        <a class="nav-item nav-link mx-3" href="/about">About Us</a>
+                        <a class="nav-item nav-link mx-3" href="/contact">Contact</a>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+
+    <!-- Boostrap Bundle (Bootstrap JS + Popper.js) -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"
+        integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o"
+        crossorigin="anonymous"></script>
+
+    <!-- Custom Script -->
+    <script src="/public/js/contact.js"></script>
+</body>
+
+</html>

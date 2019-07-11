@@ -129,6 +129,7 @@ header {
 	background-image: url(/public/images/about_us_banner.jpg);
 	background-position: center;
 	background-size: cover;
+	background-attachment: fixed;
 }
 
 /* Navigation */

@@ -56,6 +56,15 @@ function checkURI($uri) {
             
             break;
             
+        case '/contact.php':
+            if (file_exists('./views/contact.php')) {
+                require './views/contact.php';
+            } else {
+                notFound();
+            }
+            
+            break;
+            
         // Product Details
         case '/products/salabat':
             if (file_exists('./views/products/salabat.html')) {
@@ -165,6 +174,13 @@ function checkURI($uri) {
             }
             
             break;
+            
+        case '/index.php':
+            notFound();
+            break;
+            
+        default: 
+            notFound();
     }
 }
 

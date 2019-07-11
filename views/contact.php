@@ -18,24 +18,22 @@
         if (isset($_POST['firstname']) && isset($_POST['lastname'])
             && isset($_POST['email']) && isset($_POST['subject']) && isset($_POST['message']))
         {
-            $user_firstname = $_POST['firstname'];
-            $user_lastname = $_POST['lastname'];
-            $user_email = $_POST['email'];
-            $user_subject = $_POST['subject'];
-            $user_message = $_POST['message'];
-            $user_ip = $_SERVER['REMOTE_ADDR'];
+            $user_firstname = trim(strip_tags($_POST['firstname']));
+            $user_lastname = trim(strip_tags($_POST['lastname']));
+            $user_email = trim(strip_tags($_POST['email']));
+            $user_subject = trim(strip_tags($_POST['subject']));
+            $user_message = trim(strip_tags($_POST['message']));
+            $user_ip = trim(strip_tags($_SERVER['REMOTE_ADDR']));
             
-            $email_from = "info@goldenspoon.ph";
+            $email_from = "goldenspoon@watchtower.marvill.com";
             $email_subject = "Golden Spoon - " . $user_subject;
             $email_body = "Full Name: $user_firstname $user_lastname \n\n" .
                           "Message:\n" . $user_message;
                         
-            $email_to = "alexanderpaul.marinas@gmail.com";
+            $email_to = "alexanderpaul.marinas@gmail.com, exactfalse@gmail.com, marinas.alexanderpaul@gmail.com, simmerstudios.co@gmail.com";
             
             $headers =  "From: $email_from\r\n";
             $headers .= "Reply-To: $user_email\r\n";
-            $headers .= "Return-Path: $email_from\r\n";
-            $headers .= "Organization: Golden Spoon\r\n";
             $headers .= "MIME-Version: 1.0\r\n";
             $headers .= "Content-type: text/plain; charset=iso-8859-1\r\n";
             $headers .= "X-Priority: 3\r\n";

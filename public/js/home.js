@@ -10,7 +10,7 @@ const waypoints = $('.img-fluid').waypoint({
 			$(this.element).animate({ opacity: 1 }, 700);
 		}
 	},
-	offset: '50%'
+	offset: '60%'
 });
 
 /* Clients Carousel */

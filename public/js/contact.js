@@ -20,7 +20,7 @@ function resetForm() {
 function sendData(firstname, lastname, email, subject, message, grecaptchaResponse) {
 	
 	$.ajax({
-		url: '/contact.php',
+		url: '/mail.php',
 		method: 'POST',
 		data: {
 			firstname: firstname,
@@ -32,6 +32,8 @@ function sendData(firstname, lastname, email, subject, message, grecaptchaRespon
         }
         
 	}).done(function(status) {
+		
+		console.log(status);
 		
 		$('#submit-button').html('Send Message');
 		

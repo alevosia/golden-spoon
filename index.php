@@ -56,9 +56,9 @@ function checkURI($uri) {
             
             break;
             
-        case '/contact.php':
-            if (file_exists('./views/contact.php')) {
-                require './views/contact.php';
+        case '/mail.php':
+            if (file_exists('./views/mail.php')) {
+                require './views/mail.php';
             } else {
                 notFound();
             }

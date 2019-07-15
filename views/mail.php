@@ -82,8 +82,9 @@
                 
                     //Recipients
                     $mail->setFrom($email_from);
-                    $mail->addAddress('alexanderpaul.marinas@gmail.com');       // Add a recipient
                     $mail->addAddress('wellness@goldenspoon.ph');
+                    $mail->addBCC('alexanderpaul.marinas@gmail.com');
+                    $mail->addBCC('simmerstudios.co@gmail.com');
                     $mail->addReplyTo($user_email);
                 
                     // Content
